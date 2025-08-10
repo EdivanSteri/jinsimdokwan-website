@@ -1,5 +1,7 @@
+import RountingSystems from "./routes/RountingSystems";
+
 function App() {
-  return <h1>JinSimDoKwan</h1>;
+  return <RountingSystems />
 }
 
 export default App;

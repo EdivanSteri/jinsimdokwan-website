@@ -13,11 +13,13 @@ export default function Layuot() {
 
   return (
     <div>
-      <Navbar
-        menuMobileIsOpen={menuMobileIsOpen}
-        handleOpenMenu={handleOpenMenu}
-      />
-      {menuMobileIsOpen && <MobileMenuWrapper />}
+      <div className="fixed top-0 right-0 left-0">
+        <Navbar
+          menuMobileIsOpen={menuMobileIsOpen}
+          handleOpenMenu={handleOpenMenu}
+        />
+        {menuMobileIsOpen && <MobileMenuWrapper />}
+      </div>
       <Outlet />
     </div>
   );

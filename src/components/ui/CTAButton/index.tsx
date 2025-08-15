@@ -1,6 +1,9 @@
 type CTAButtonProps = {
   text: string;
+  textSize?: string;
   height: string;
+  weight?: string;
+  padding?: string;
   bgColor: string;
   border?: string;
   animation?: string;
@@ -9,7 +12,10 @@ type CTAButtonProps = {
 
 export default function CTAButton({
   text,
+  textSize = "",
   height,
+  weight = "",
+  padding = "",
   bgColor,
   border = "",
   animation = "",
@@ -17,7 +23,7 @@ export default function CTAButton({
 }: CTAButtonProps) {
   return (
     <button
-      className={`w-full ${height} flex items-center justify-center gap-x-2 rounded-4xl ${bgColor} ${border} text-white font-bold cursor-pointer 
+      className={`${weight} ${height} ${padding} flex items-center justify-center gap-x-2 rounded-4xl ${bgColor} ${border} text-white ${textSize} font-bold cursor-pointer 
                   ${animation}
                   lg:w-55 lg:h-10
                   `}

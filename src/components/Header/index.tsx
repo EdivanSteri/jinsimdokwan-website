@@ -14,7 +14,7 @@ export default function Header() {
       {/* Contenuto */}
       <div
         className="relative z-10 h-full 
-                      pt-18 flex flex-col items-center justify-center gap-y-8 text-center"
+                      pt-18 flex flex-col items-center justify-center gap-y-8 text-center lg:items-start lg:text-start lg:px-15 xl:px-40"
       >
         <HeaderTag />
         <HeaderHeading />

@@ -27,12 +27,12 @@ export default function Navbar({
         </div>
 
         {/* Menu desktop */}
-        <div className="hidden lg:flex flex-1 justify-center">
+        <div className="hidden lg:flex justify-center">
           <NavLinks />
         </div>
 
         {/* Area destra */}
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           {/* Toggle mobile */}
           <div className="lg:hidden">
             <MenuIcon
@@ -42,18 +42,18 @@ export default function Navbar({
           </div>
 
           {/* CTA desktop */}
-          <div className="hidden lg:block ml-4">
+          <div className="w-full hidden lg:flex lg:items-center lg:justify-center">
             <CTAButton
               text="Prenota lezione gratuita"
               height="h-12"
               bgColor="bg-gradient-to-r from-[#D92525] to-[#B91C1C] lg:hover:from-[#c32121] lg:hover:to-[#a71919]"
-              animation="lg:transition lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
+              animation="lg:transition-transform lg:transition-colors lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
               icon={<PhoneIcon className="size-6 font-bold" />}
             />
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-[#D66161] transform scale-y-50 origin-bottom"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-[#D66161] transform scale-y-45 origin-bottom"></div>
     </nav>
   );
 }

@@ -3,4 +3,6 @@
 
 @theme {
   --font-pacifico: "Pacifico", serif;
+
+  --breakpoint-xs: 460px;
 }

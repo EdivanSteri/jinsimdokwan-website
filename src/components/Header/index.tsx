@@ -7,14 +7,18 @@ import HeaderTag from "./HeaderTag";
 
 export default function Header() {
   return (
-    <header className="relative h-screen bg-[url('/gym-image-header-background.jpg')] bg-cover bg-center">
-      {/* Overlay */}
-      <Overlay color="bg-black/80" />
+    <header
+      role="banner"
+      aria-label="Hero della palestra"
+      className="relative min-h-[100dvh] bg-[url('/gym-image-header-background.jpg')] bg-cover bg-center bg-no-repeat"
+    >
+      {/* Overlay semantico (visivo) */}
+      <Overlay color="bg-black/80" aria-hidden="true" />
 
-      {/* Contenuto */}
+      {/* Contenuto (z-index sopra l'overlay) */}
       <div
-        className="relative z-10 h-full 
-                      pt-18 flex flex-col items-center justify-center gap-y-8 text-center lg:items-start lg:text-start lg:px-15 xl:px-40"
+        className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center gap-y-8 px-4 pt-16 text-center
+                   lg:items-start lg:text-left lg:px-16 xl:px-40"
       >
         <HeaderTag />
         <HeaderHeading />

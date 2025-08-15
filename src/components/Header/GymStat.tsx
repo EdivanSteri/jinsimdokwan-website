@@ -14,8 +14,10 @@ export default function GymStat({
   return (
     <div className={`${grid} flex items-center justify-center gap-x-2`}>
       <div className="p-2 h-10 w-10 flex items-center justify-center rounded-full bg-red-800/20">
-        {icon}
+        {/* icona decorativa */}
+        <span aria-hidden="true">{icon}</span>
       </div>
+
       <div className="flex flex-col justify-center items-center text-white">
         <p className="text-xl sm:text-2xl font-bold">{value}+</p>
         <p className="text-xs sm:text-md">{text}</p>

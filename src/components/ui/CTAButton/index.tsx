@@ -25,7 +25,6 @@ export default function CTAButton({
     <button
       className={`${weight} ${height} ${padding} flex items-center justify-center gap-x-2 rounded-4xl ${bgColor} ${border} text-white ${textSize} font-bold cursor-pointer 
                   ${animation}
-                  lg:w-55 lg:h-10
                   `}
     >
       {icon}

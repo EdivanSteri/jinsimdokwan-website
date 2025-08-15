@@ -1,3 +1,4 @@
+import { PhoneIcon } from "@heroicons/react/16/solid";
 import CTAButton from "../ui/CTAButton";
 import NavLinks from "./NavLinks";
 
@@ -11,7 +12,14 @@ export default function MobileMenuWrapper() {
       <NavLinks />
       {/* CTA */}
       <div>
-        <CTAButton />
+        <CTAButton
+          text="Prenota Lezione Gratuita"
+          height="h-12"
+          weight="w-full"
+          bgColor="bg-gradient-to-r from-[#D92525] to-[#B91C1C] lg:hover:from-[#c32121] lg:hover:to-[#a71919]"
+          animation="lg:transition-transform lg:transition-colors lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
+          icon={<PhoneIcon className="size-6 font-bold" />}
+        />
       </div>
     </nav>
   );

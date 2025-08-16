@@ -1,5 +1,6 @@
 type GymStatProps = {
   icon: React.ReactNode;
+  iconAnimation?: string;
   value: number;
   valueColor?: string;
   text: string;
@@ -12,6 +13,7 @@ type GymStatProps = {
 
 export default function GymStat({
   icon,
+  iconAnimation = "",
   value,
   valueColor,
   text,
@@ -26,7 +28,7 @@ export default function GymStat({
       className={`${grid} flex ${flex}  items-center justify-center gap-x-2`}
     >
       <div
-        className={`p-2 ${iconWraperSize} flex items-center justify-center rounded-full ${bgColor}`}
+        className={`p-2 ${iconWraperSize} flex items-center justify-center rounded-full ${bgColor} ${iconAnimation}`}
       >
         {/* icona decorativa */}
         <span aria-hidden="true">{icon}</span>

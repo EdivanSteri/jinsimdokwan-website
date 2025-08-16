@@ -7,7 +7,8 @@ type AboutBenefitProps = {
 export default function AboutBenefit({ benefit }: AboutBenefitProps) {
   return (
     <div className="flex items-start gap-x-4">
-      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-[#E63636] flex items-center justify-center">
+      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-[#E63636] flex items-center justify-center
+                      transition-transform duration-300 ease-in-out hover:-translate-y-[2px]">
         {benefit.icon}
       </div>
 

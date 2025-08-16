@@ -16,7 +16,13 @@ export default function About() {
       <AboutSubHeading />
       <AboutDescription />
       <div className="w-full grid grid-cols-1 lg:grid-cols-2  gap-6">
-        <div className="lg:col-start-2 lg:justify-self-center lg:self-center h-48 lg:h-96  w-full bg-[url('/team.jpg')] bg-cover  bg-center bg-no-repeat rounded-2xl lg:shadow-[#E63636] lg:shadow-xl"></div>
+        <div className="lg:col-start-2 lg:justify-self-center lg:self-center h-48 lg:h-96 w-full rounded-2xl lg:shadow-[#E63636] lg:shadow-xl overflow-hidden relative group">
+          <img
+            src="/team.jpg"
+            alt="team"
+            className="w-full h-full object-cover transform transition-transform duration-300 ease-in-out group-hover:scale-[1.05] will-change-transform"
+          />
+        </div>
         <div className="lg:row-end-2 w-full flex flex-col items-start justify-start gap-y-6">
           <AboutPartnersWrapper />
           <AboutBenefitsWrapper />

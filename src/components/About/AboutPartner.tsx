@@ -8,10 +8,10 @@ type AboutPartnerProps = {
 export default function AboutPartner({ partner, index }: AboutPartnerProps) {
   return (
     <div
-      className="flex flex-col items-center justify-center gap-y-2 p-4 bg-[#DEEBFE] border border-[#7dcfff] rounded-2xl"
+      className="flex flex-col lg:flex-row items-center justify-center gap-y-2 p-4 bg-[#DEEBFE] border border-[#7dcfff] rounded-2xl"
       key={index}
     >
-      <div className="flex flex-col items-start justify-start gap-y-2">
+      <div className="lg:w-3/4 flex flex-col items-start justify-start gap-y-2">
         <h3 className="text-md text-[#1E3A8A] font-bold">{partner.title}</h3>
         <p className="text-sm text-[#1D87EA]">{partner.description}</p>
         <a
@@ -23,7 +23,7 @@ export default function AboutPartner({ partner, index }: AboutPartnerProps) {
           {partner.textCTASite}
         </a>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="lg:w-1/4 flex items-center justify-center">
         <img
           src={partner.image}
           alt={partner.title}

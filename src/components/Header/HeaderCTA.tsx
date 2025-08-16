@@ -11,7 +11,7 @@ export default function HeaderCTA() {
         width="w-full sm:w-lg"
         padding="px-4 py-8"
         bgColor="bg-gradient-to-r from-[#D92525] to-[#B91C1C] hover:from-[#c32121] hover:to-[#a71919]"
-        animation="transition transition-transform delay-200 ease-in-out hover:-translate-y-[4px]"
+        animation="transition-transform transition-colors duration-300 ease-in-out hover:-translate-y-[2px]"
         icon={<PlayCircleIcon className="size-5 font-bold" />}
       />
       <CTAButton
@@ -22,7 +22,7 @@ export default function HeaderCTA() {
         padding="px-4 py-8"
         bgColor="bg-white/5 hover:bg-white/10"
         border="border"
-        animation="transition transition-transform delay-200 ease-in-out hover:-translate-y-[4px]"
+        animation="transition-transform transition-colors duration-300 ease-in-out hover:-translate-y-[2px]"
         icon={<EyeIcon className="size-5 font-bold" />}
       />
     </span>

@@ -37,7 +37,7 @@ const benefits: Benefit[] = [
 
 export default function AboutBenefitsWrapper() {
   return (
-    <div className="w-full grid grid-cols-1 gap-2">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-y-2">
       {benefits.map((benefit, index) => (
         <AboutBenefit benefit={benefit} index={index} />
       ))}

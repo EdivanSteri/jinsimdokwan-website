@@ -15,9 +15,9 @@ export default function About() {
       <AboutHeading />
       <AboutSubHeading />
       <AboutDescription />
-      <div className="w-full grid grid-cols-1 gap-6">
-        <div className="h-48 w-full bg-[url('/team.jpg')] bg-cover  bg-center bg-no-repeat rounded-2xl"></div>
-        <div className="w-full flex flex-col items-start justify-start gap-y-6">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2  gap-6">
+        <div className="lg:col-start-2 lg:justify-self-center lg:self-center h-48 lg:h-96  w-full bg-[url('/team.jpg')] bg-cover  bg-center bg-no-repeat rounded-2xl lg:shadow-[#E63636] lg:shadow-xl"></div>
+        <div className="lg:row-end-2 w-full flex flex-col items-start justify-start gap-y-6">
           <AboutPartnersWrapper />
           <AboutBenefitsWrapper />
         </div>
@@ -28,7 +28,7 @@ export default function About() {
         textSize="text-sm"
         width="w-/2"
         padding="px-6 py-3"
-        animation="transition transition-transform transition-colors delay-200 ease-in-out hover:-translate-y-[2px]"
+        animation="transition-transform transition-colors duration-300 ease-in-out hover:-translate-y-[2px]"
         icon={<PhoneIcon className="size-5" />}
       />
     </section>

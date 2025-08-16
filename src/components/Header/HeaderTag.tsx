@@ -1,4 +1,4 @@
-import { TrophyIcon } from "@heroicons/react/16/solid";
+import { TrophyIcon } from "@heroicons/react/24/outline";
 
 export default function HeaderTag() {
   return (

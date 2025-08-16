@@ -1,11 +1,15 @@
 import About from "../../components/About";
 import Header from "../../components/Header";
+import Results from "../../components/Results";
 
 export default function HomePage() {
+
+
   return (
-    <div>
+    <div className="bg-[#FEFEFE]">
       <Header />
       <About />
+      <Results />
     </div>
   );
 }

@@ -2,8 +2,8 @@ import {
   FireIcon,
   UserGroupIcon,
   UserPlusIcon,
-} from "@heroicons/react/16/solid";
-import GymStat from "./GymStat";
+} from "@heroicons/react/24/outline";
+import GymStat from "../ui/GymStat";
 
 export default function HeaderGymStats() {
   const stats = [
@@ -31,7 +31,17 @@ export default function HeaderGymStats() {
   return (
     <div className="grid grid-cols-2 gap-y-2 xs:grid-cols-3">
       {stats.map(({ id, icon, value, text, grid }) => (
-        <GymStat key={id} icon={icon} value={value} text={text} grid={grid} />
+        <GymStat
+          key={id}
+          icon={icon}
+          value={value}
+          valueColor="text-white"
+          text={text}
+          textColor="text-gray-400"
+          grid={grid}
+          bgColor="bg-red-800/20"
+          iconWraperSize="h-10 w-10"
+        />
       ))}
     </div>
   );

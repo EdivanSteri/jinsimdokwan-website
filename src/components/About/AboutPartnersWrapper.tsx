@@ -1,16 +1,12 @@
 import AboutPartner from "./AboutPartner";
+import type { Partner } from "./AboutPartner";
 
-export type Partners = {
-  title: string;
-  description: string;
-  site: string;
-  textCTASite: string;
-  image: string;
-};
+export type Partners = Partner;
 
 export default function AboutPartnersWrapper() {
   const partners: Partners[] = [
     {
+      id: "fitae-itf",
       title: "Affiliati FITAE ITF",
       description:
         "Siamo ufficialmente affiliati alla FITAE ITF, la Federazione Italiana Taekwondo ITF, che garantisce la qualità e l'autenticità del nostro insegnamento secondo i più alti standard.",
@@ -19,6 +15,7 @@ export default function AboutPartnersWrapper() {
       image: "/fitae logo.png",
     },
     {
+      id: "team-tkd-sardegna",
       title: "Partner del Team Taekwondo Sardegna",
       description:
         "Siamo orgogliosi di far parte del Team Taekwondo Sardegna, una rete di eccellenza che unisce le migliori palestre del territorio per promuovere i valori del Taekwondo.",
@@ -29,10 +26,19 @@ export default function AboutPartnersWrapper() {
   ];
 
   return (
-    <div className="flex flex-col items-start justify-start gap-y-6 ">
-      {partners.map((partner, index) => (
-        <AboutPartner partner={partner} index={index} />
-      ))}
-    </div>
+    <section
+      aria-labelledby="partners-heading"
+      className="w-full flex flex-col items-start justify-start gap-y-6"
+    >
+      <h4 id="partners-heading" className="sr-only">
+        Partner e Affiliazioni
+      </h4>
+
+      <div className="flex flex-col items-start justify-start gap-y-6 w-full">
+        {partners.map((partner) => (
+          <AboutPartner key={partner.id} partner={partner} />
+        ))}
+      </div>
+    </section>
   );
 }

@@ -16,7 +16,7 @@ export default function Navbar({
 
   return (
     <nav className="relative">
-      <div className="px-4 py-2 md:px-10 lg:px-15 xl:px-40 w-full flex items-center justify-between bg-black border-b-[0.1px]">
+      <div className="px-4 py-2  sm:px-15 md:px-30 w-full flex items-center justify-between bg-black border-b-[0.1px]">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
           <img src={logo} width={45} height={45} alt="Logo JinSimDoKwan" />
@@ -46,9 +46,9 @@ export default function Navbar({
             <CTAButton
               text="Prenota lezione gratuita"
               height="h-10"
-              weight="lg:w-60"
+              width="lg:w-60"
               bgColor="bg-gradient-to-r from-[#D92525] to-[#B91C1C] lg:hover:from-[#c32121] lg:hover:to-[#a71919]"
-              animation="lg:transition-transform lg:transition-colors lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
+              animation="lg:transition lg:transition-transform lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
               icon={<PhoneIcon className="size-6 font-bold" />}
             />
           </div>

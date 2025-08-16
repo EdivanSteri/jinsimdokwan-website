@@ -1,0 +1,36 @@
+import { PhoneIcon } from "@heroicons/react/24/outline";
+import CTAButton from "../ui/CTAButton";
+import AboutBenefitsWrapper from "./AboutBenefitsWrapper";
+import AboutDescription from "./AboutDescription";
+import AboutHeading from "./AboutHeading";
+import AboutPartnersWrapper from "./AboutPartnersWrapper";
+import AboutSubHeading from "./AboutSubHeading";
+
+export default function About() {
+  return (
+    <section
+      id="chi-siamo"
+      className="px-4 sm:px-15 md:px-30 py-10  h-full  flex flex-col items-start justify-start gap-y-6 "
+    >
+      <AboutHeading />
+      <AboutSubHeading />
+      <AboutDescription />
+      <div className="w-full grid grid-cols-1 gap-6">
+        <div className="h-48 w-full bg-[url('/team.jpg')] bg-cover  bg-center bg-no-repeat rounded-2xl"></div>
+        <div className="w-full flex flex-col items-start justify-start gap-y-6">
+          <AboutPartnersWrapper />
+          <AboutBenefitsWrapper />
+        </div>
+      </div>
+      <CTAButton
+        text="Contattaci Ora"
+        bgColor="bg-black hover:bg-[#E63636]"
+        textSize="text-sm"
+        width="w-/2"
+        padding="px-6 py-3"
+        animation="transition transition-transform transition-colors delay-200 ease-in-out hover:-translate-y-[2px]"
+        icon={<PhoneIcon className="size-5" />}
+      />
+    </section>
+  );
+}

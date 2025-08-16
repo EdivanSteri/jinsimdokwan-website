@@ -15,9 +15,9 @@ export default function MobileMenuWrapper() {
         <CTAButton
           text="Prenota Lezione Gratuita"
           height="h-12"
-          weight="w-full"
+          width="w-full"
           bgColor="bg-gradient-to-r from-[#D92525] to-[#B91C1C] lg:hover:from-[#c32121] lg:hover:to-[#a71919]"
-          animation="lg:transition-transform lg:transition-colors lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
+          animation="lg:transition lg:transition-transform lg:delay-200 lg:ease-in-out lg:hover:-translate-y-[2px]"
           icon={<PhoneIcon className="size-6 font-bold" />}
         />
       </div>

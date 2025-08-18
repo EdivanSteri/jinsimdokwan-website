@@ -25,7 +25,8 @@ export default function CourseCardTimeTable({
               } `}
             >
               <p className="text-sm font-medium">
-                {timetable.targetAudience} ({timetable.agesRange?.min}-
+                {timetable.targetAudience} ({timetable.agesRange?.min}
+                {timetable.agesRange?.max === undefined ? "+" : "-"}
                 {timetable.agesRange?.max} anni)
               </p>
               <p className="text-md font-bold text-[#E32626]">

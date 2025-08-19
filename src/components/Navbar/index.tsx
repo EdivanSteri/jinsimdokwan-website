@@ -16,7 +16,7 @@ export default function Navbar({
 
   return (
     <nav className="relative">
-      <div className="px-4 py-2  sm:px-15 md:px-30 w-full flex items-center justify-between bg-black border-b-[0.1px]">
+      <div className="px-4 py-2  sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 w-full flex items-center justify-between bg-black border-b-[0.1px]">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
           <img src={logo} width={45} height={45} alt="Logo JinSimDoKwan" />

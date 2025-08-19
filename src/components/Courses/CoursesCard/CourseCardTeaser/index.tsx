@@ -9,7 +9,7 @@ type CourseCardTeaserProps = {
 
 export default function CourseCardTeaser({ course }: CourseCardTeaserProps) {
   return (
-    <div className=" flex flex-col items-start gap-y-3">
+    <div className="flex flex-col items-start gap-y-3">
       <CourseCardTeaserTitle course={course} />
       <CourseCardTeaserSubTitle course={course} />
       <CourseCardTeaserDescription course={course} />

@@ -13,10 +13,18 @@ type CourseCardProps = {
 };
 
 export default function CourseCard({ course }: CourseCardProps) {
+  const maxWidth: string = course.isPrimary ? "max-w-5xl" : "max-w-md";
+  const flexDirection: string = course.isPrimary
+    ? "lg:flex items-center justify-center"
+    : "";
+
   return (
-    <li key={course.id} className="mb-6">
-      <div className="relative shadow-lg rounded-3xl">
-        <CourseCardHeader course={course} />
+    <li
+      key={course.id}
+      className={`mb-6 flex flex-col items-center justify-center w-full ${maxWidth}`}
+    >
+      <div className={`relative shadow-lg rounded-3xl w-full ${flexDirection} lg:aspect-[16/9]`}>
+        <CourseCardHeader course={course} /> 
         <div className="p-6">
           <CourseCardTeaser course={course} />
           <CourseCardTimeTable course={course} />

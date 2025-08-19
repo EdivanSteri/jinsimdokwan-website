@@ -14,7 +14,7 @@ export default function CourseCardBenefits({
       {course.familyBenefits && course.familyBenefits.length > 0 && (
         <div className="mt-4">
           <h4 className="text-md font-semibold mb-2">VANTAGGI FAMIGLIA:</h4>
-          <ul>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {course.familyBenefits.map((benefit, index) => (
               <CourseCardItem
                 value={benefit}

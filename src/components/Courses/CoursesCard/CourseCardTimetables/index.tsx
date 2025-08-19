@@ -18,7 +18,7 @@ export default function CourseCardTimeTable({
         key={index}
         className={`${timetableWrapperClass} ${
           course.courseTimetable.length > 1 ? "mt-2" : "mt-4"
-        } `}
+        } w-full`}
       >
         <p className="text-sm font-medium">
           {timetable.targetAudience} ({timetable.agesRange?.min}
@@ -50,15 +50,17 @@ export default function CourseCardTimeTable({
   return (
     <div>
       {course.isPrimary ? (
-        <>
+        <div className="">
           <div className="flex items-center gap-x-2 mt-4">
             <CalendarIcon className="size-4 text-[#E23726]" />
             <span className="text-sm font-medium">ORARI DELLE LEZIONI:</span>
           </div>
-          {course.courseTimetable.map((timetable, index) =>
-            timetableView(timetable, index)
-          )}
-        </>
+          <div className="flex flex-col items-center justify-center gap-y-2 mt-2 sm:flex-row sm:items-center sm:justify-between gap-x-2">
+            {course.courseTimetable.map((timetable, index) =>
+              timetableView(timetable, index)
+            )}
+          </div>
+        </div>
       ) : (
         <div>
           {course.courseTimetable.map((timetable, index) =>

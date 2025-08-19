@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="chi-siamo"
-      className="px-4 sm:px-15 md:px-30 py-10  h-full  flex flex-col items-start justify-start gap-y-6 "
+      className="px-4 sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 py-10  h-full  flex flex-col items-start justify-start gap-y-6 "
     >
       <AboutHeading />
       <AboutSubHeading />

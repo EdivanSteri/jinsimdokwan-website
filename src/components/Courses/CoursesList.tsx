@@ -138,11 +138,16 @@ const courses: CourseView[] = [
 ];
 
 export default function CoursesList() {
+  const [mainCourse, ...otherCourses] = courses;
+
   return (
-    <ul>
-      {courses.map((course) => (
-        <CourseCard key={course.id} course={course} />
-      ))}
+    <ul className="flex flex-col items-center justify-center w-full mx-auto md:gap-y-10">
+      <CourseCard key={mainCourse.id} course={mainCourse} />
+      <div className="flex flex-col items-center justify-center md:flex-row md:gap-6 w-full">
+        {otherCourses.map((course) => (
+          <CourseCard key={course.id} course={course} />
+        ))}
+      </div>
     </ul>
   );
 }

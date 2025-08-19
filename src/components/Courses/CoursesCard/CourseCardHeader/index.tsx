@@ -12,7 +12,7 @@ export default function CourseCardHeader({ course }: CourseCardHeaderProps) {
   return (
     <div
       className={`relative w-full ${
-        course.isPrimary ? " h-65" : "h-40"
+        course.isPrimary ? " h-65 lg:h-full" : "h-40"
       } overflow-hidden rounded-t-3xl`}
     >
       <CourseCardHeaderBackground course={course} />

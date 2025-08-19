@@ -1,5 +1,6 @@
 import { CheckIcon } from "@heroicons/react/16/solid";
-import type { CourseView } from "../CoursesList";
+import type { CourseView } from "../../CoursesList";
+import CourseCardItem from "../CourseCardItem";
 
 type CourseCardLearningOutcomesProps = {
   course: CourseView;
@@ -14,16 +15,8 @@ export default function CourseCardLearningOutcomes({
         <div className="mt-4">
           <h4 className="text-md font-semibold mb-2">COSA IMPARERAI:</h4>
           <ul>
-            {course.learningOutcomes.map((benefit, index) => (
-              <li
-                key={index}
-                className="text-xs text-gray-700 flex items-center gap-x-2 mb-1 "
-              >
-                <span className="bg-[#FEE2E2] rounded-full p-1">
-                  <CheckIcon className="size-3 text-[#DC2626]" />
-                </span>{" "}
-                {benefit}
-              </li>
+            {course.learningOutcomes.map((lesson, index) => (
+              <CourseCardItem value={lesson} index={index} icon={<CheckIcon className="size-3 text-[#DC2626]" />}/>
             ))}
           </ul>
         </div>

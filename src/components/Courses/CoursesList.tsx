@@ -19,7 +19,7 @@ type AgesRange = {
 };
 
 // timetable domain model (più chiaro e immutabile)
-type CourseTimetable = Readonly<{
+export type CourseTimetable = Readonly<{
   days: ReadonlyArray<Weekday>;
   startTime: TimeString;
   endTime: TimeString;

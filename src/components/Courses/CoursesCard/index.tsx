@@ -13,7 +13,7 @@ type CourseCardProps = {
 };
 
 export default function CourseCard({ course }: CourseCardProps) {
-  const maxWidth: string = course.isPrimary ? "max-w-5xl" : "max-w-md";
+  const maxWidth: string = course.isPrimary ? "lg:max-w-5xl" : "lg:max-w-md";
   const flexDirection: string = course.isPrimary
     ? "lg:flex items-center justify-center"
     : "";

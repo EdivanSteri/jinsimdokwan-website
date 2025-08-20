@@ -1,10 +1,10 @@
 import { PhoneIcon } from "@heroicons/react/24/outline";
-import CTAButton from "../ui/CTAButton";
 import AboutBenefitsWrapper from "./AboutBenefitsWrapper";
 import AboutDescription from "./AboutDescription";
 import AboutHeading from "./AboutHeading";
 import AboutPartnersWrapper from "./AboutPartnersWrapper";
 import AboutSubHeading from "./AboutSubHeading";
+import IconButton from "../ui/IconButton";
 
 export default function About() {
   return (
@@ -28,15 +28,18 @@ export default function About() {
           <AboutBenefitsWrapper />
         </div>
       </div>
-      <CTAButton
-        text="Contattaci Ora"
-        bgColor="bg-black hover:bg-[#E63636]"
-        textSize="text-sm"
-        width="w-/2"
-        padding="px-6 py-3"
-        animation="transition-transform transition-colors duration-300 ease-in-out hover:-translate-y-[2px]"
-        icon={<PhoneIcon className="size-5" />}
-      />
+      <IconButton
+        className={`
+                w-/2
+                px-6 py-3
+                bg-black hover:bg-[#E63636] 
+                text-sm
+                transition duration-300 ease-in-out hover:-translate-y-[2px]
+              `}
+        icon={PhoneIcon}
+      >
+        Contattaci Ora
+      </IconButton>
     </section>
   );
 }

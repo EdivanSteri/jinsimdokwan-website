@@ -1,7 +1,7 @@
 import { Bars3Icon, PhoneIcon, XMarkIcon } from "@heroicons/react/16/solid";
 import logo from "/logo.png";
 import NavLinks from "./NavLinks";
-import CTAButton from "../ui/CTAButton";
+import IconButton from "../ui/IconButton";
 
 type NavbarProps = {
   menuMobileIsOpen: boolean;
@@ -43,14 +43,17 @@ export default function Navbar({
 
           {/* CTA desktop */}
           <div className="w-full hidden lg:flex lg:items-center lg:justify-center">
-            <CTAButton
-              text="Prenota lezione gratuita"
-              height="h-10"
-              width="lg:w-60"
-              bgColor="bg-gradient-to-r from-[#D92525] to-[#B91C1C] lg:hover:from-[#c32121] lg:hover:to-[#a71919]"
-              animation="lg:transition-transform lg:transition-colors lg:duration-300 lg:ease-in-out lg:hover:-translate-y-[2px]"
-              icon={<PhoneIcon className="size-6 font-bold" />}
-            />
+            <IconButton
+              className={`
+                lg:w-60 h-10
+                bg-gradient-to-r from-[#D92525] to-[#B91C1C] lg:hover:from-[#c32121] lg:hover:to-[#a71919]
+                sm:text-base
+                lg:transition lg:duration-300 lg:ease-in-out lg:hover:-translate-y-[2px]
+              `}
+              icon={PhoneIcon}
+            >
+              Prenota Lezione Gratuita
+            </IconButton>
           </div>
         </div>
       </div>

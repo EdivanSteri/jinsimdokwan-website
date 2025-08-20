@@ -174,7 +174,7 @@ export default React.memo(function CoursesList(): JSX.Element {
 
       <ul
         role="list"
-        className="flex flex-col items-center justify-center w-full mx-auto md:gap-y-10"
+        className="flex flex-col items-center justify-center w-full mx-auto gap-y-10 md:gap-y-15"
       >
         <CourseCard key={mainCourse.id} course={mainCourse} />
 

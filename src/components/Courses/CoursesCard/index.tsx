@@ -26,10 +26,22 @@ export default React.memo(function CourseCard({
     [course.isPrimary]
   );
 
+  const shadowClasses = useMemo(() => {
+    return course.isPrimary
+      ? "shadow-2xl shadow-[#FECACA] hover:shadow-3xl"
+      : "shadow-lg hover:shadow-xl";
+  }, [course.isPrimary]);
+
+  const animationClasses = useMemo(() => {
+    return !course.isPrimary
+      ? "transition-transform transition-colors duration-300 ease-in-out hover:-translate-y-[4px]"
+      : "";
+  }, [course.isPrimary]);
+
   const cardRootClasses = useMemo(
     () =>
-      `relative shadow-lg rounded-2xl w-full ${flexDirection} lg:aspect-[16/9]`,
-    [flexDirection]
+      `relative ${shadowClasses} transition-shadow duration-300 ${animationClasses} rounded-2xl w-full ${flexDirection} lg:aspect-[16/9] group`,
+    [animationClasses, flexDirection, shadowClasses]
   );
 
   return (

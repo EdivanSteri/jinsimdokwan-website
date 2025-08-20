@@ -10,7 +10,10 @@ export default React.memo(function CourseCardHeaderBackground({
   course,
 }: CourseCardHeaderBackgroundProps) {
   const roundedClass = useMemo(
-    () => (course.isPrimary ? "lg:rounded-l-3xl lg:rounded-tr-none" : ""),
+    () =>
+      course.isPrimary
+        ? "lg:rounded-l-xl lg:rounded-tr-none"
+        : "group-hover:scale-110 transition-scale duration-300 ease-in-out",
     [course.isPrimary]
   );
 

@@ -1,3 +1,4 @@
+import React, { type JSX } from "react";
 import type { CourseView } from "../../CoursesList";
 import CourseCardTeaserDescription from "./CourseCardTeaserDescription";
 import CourseCardTeaserSubTitle from "./CourseCardTeaserSubTitle";
@@ -7,7 +8,9 @@ type CourseCardTeaserProps = {
   course: CourseView;
 };
 
-export default function CourseCardTeaser({ course }: CourseCardTeaserProps) {
+export default React.memo(function CourseCardTeaser({
+  course,
+}: CourseCardTeaserProps): JSX.Element {
   return (
     <div className="flex flex-col items-start gap-y-3">
       <CourseCardTeaserTitle course={course} />
@@ -15,4 +18,4 @@ export default function CourseCardTeaser({ course }: CourseCardTeaserProps) {
       <CourseCardTeaserDescription course={course} />
     </div>
   );
-}
+});

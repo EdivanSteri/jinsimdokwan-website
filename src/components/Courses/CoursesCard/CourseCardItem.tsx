@@ -1,24 +1,18 @@
+import type { JSX } from "react";
+import React from "react";
+
 type CourseCardItemProps = {
   value: string;
-  index: number;
   icon?: React.ReactNode;
 };
 
-export default function CourseCardItem({
+export default React.memo(function CourseCardItem({
   value,
-  index,
   icon,
-}: CourseCardItemProps) {
+}: CourseCardItemProps): JSX.Element {
   return (
-    <li
-      key={index}
-      className="text-xs text-gray-700 flex items-center gap-x-2 mb-1 "
-    >
-      <span className="bg-[#FEE2E2] rounded-full p-1">
-        {icon}
-        {/* <GiftIcon className="size-3 text-[#DC2626]" /> */}
-      </span>{" "}
-      {value}
+    <li className="text-xs text-gray-700 flex items-center gap-x-2 mb-1 ">
+      <span className="bg-[#FEE2E2] rounded-full p-1">{icon}</span> {value}
     </li>
   );
-}
+});

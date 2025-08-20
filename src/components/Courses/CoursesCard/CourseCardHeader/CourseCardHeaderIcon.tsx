@@ -1,19 +1,22 @@
+import type { JSX } from "react";
 import type { CourseView } from "../../CoursesList";
+import React from "react";
 
 type CourseCardHeaderIconProps = {
   course: CourseView;
 };
 
-export default function CourseCardHeaderIcon({
+export default React.memo(function CourseCardHeaderIcon({
   course,
-}: CourseCardHeaderIconProps) {
+}: CourseCardHeaderIconProps): JSX.Element | null {
+  if (!course.icon) return null;
+
   return (
-    <>
-      {course.icon && (
-        <div className="text-2xl flex items-center justify-center bg-white rounded-4xl p-1 ">
-          {course.icon}
-        </div>
-      )}
-    </>
+    <div
+      className="text-2xl flex items-center justify-center bg-white rounded-4xl p-1"
+      aria-hidden="true"
+    >
+      {course.icon}
+    </div>
   );
-}
+});

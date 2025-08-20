@@ -7,29 +7,48 @@ import CourseCardLearningOutcomes from "./CourseCardLearningOutcomes";
 import CourseCardTeaser from "./CourseCardTeaser";
 import CourseCardTimeTable from "./CourseCardTimetables";
 import CourseCardPrimaryTag from "./CourseCardPrimaryTag";
+import { useMemo, type JSX } from "react";
+import React from "react";
 
 type CourseCardProps = {
   course: CourseView;
 };
 
-export default function CourseCard({ course }: CourseCardProps) {
-  const maxWidth: string = course.isPrimary ? "lg:max-w-5xl" : "lg:max-w-md";
-  const flexDirection: string = course.isPrimary
-    ? "lg:flex items-center justify-center"
-    : "";
+export default React.memo(function CourseCard({
+  course,
+}: CourseCardProps): JSX.Element {
+  const containerMaxWidth = useMemo(
+    () => (course.isPrimary ? "lg:max-w-6xl" : "lg:max-w-md"),
+    [course.isPrimary]
+  );
+  const flexDirection = useMemo(
+    () => (course.isPrimary ? "lg:flex lg:items-center lg:justify-center" : ""),
+    [course.isPrimary]
+  );
+
+  const cardRootClasses = useMemo(
+    () =>
+      `relative shadow-lg rounded-2xl w-full ${flexDirection} lg:aspect-[16/9]`,
+    [flexDirection]
+  );
 
   return (
     <li
-      key={course.id}
-      className={`mb-6 flex flex-col items-center justify-center w-full ${maxWidth}`}
+      className={`mb-6 flex flex-col items-center justify-center w-full ${containerMaxWidth}`}
     >
-      <div className={`relative shadow-lg rounded-3xl w-full ${flexDirection} lg:aspect-[16/9]`}>
-        <CourseCardHeader course={course} /> 
-        <div className="p-6">
+      <article
+        className={cardRootClasses}
+        aria-labelledby={`course-${course.id}-title`}
+      >
+        <CourseCardHeader course={course} />
+
+        {/* Contenuto principale */}
+        <main className="p-6">
           <CourseCardTeaser course={course} />
           <CourseCardTimeTable course={course} />
           <CourseCardBenefits course={course} />
           <CourseCardLearningOutcomes course={course} />
+
           <div className="mt-6 flex items-center justify-center">
             <CTAButton
               text="Prenota Lezione Gratuita"
@@ -43,9 +62,14 @@ export default function CourseCard({ course }: CourseCardProps) {
               icon={<CalendarDaysIcon className="size-5" />}
             />
           </div>
-        </div>
-        {course.isPrimary && <CourseCardPrimaryTag />}
-      </div>
+        </main>
+
+        {course.isPrimary && (
+          <div className="absolute top-0 w-full">
+            <CourseCardPrimaryTag />
+          </div>
+        )}
+      </article>
     </li>
   );
-}
+});

@@ -1,5 +1,6 @@
-import type React from "react";
+import React, { type JSX } from "react";
 import CourseCard from "./CoursesCard";
+import { useMemo } from "react";
 
 type Weekday =
   | "Lunedì"
@@ -48,7 +49,24 @@ export type CourseView = DomainCourse & {
   icon?: React.ReactNode;
 };
 
-const courses: CourseView[] = [
+/* Icone create una volta (evitano ricreazioni ad ogni render) */
+const ICON_TKD = (
+  <span aria-hidden="true" className="inline-block">
+    🥋
+  </span>
+);
+const ICON_SHIELD = (
+  <span aria-hidden="true" className="inline-block">
+    🛡️
+  </span>
+);
+const ICON_PILATES = (
+  <span aria-hidden="true" className="inline-block">
+    🧘
+  </span>
+);
+
+const COURSES: ReadonlyArray<CourseView> = [
   {
     id: "taekwondo",
     title: "Taekwondo ITF",
@@ -80,7 +98,7 @@ const courses: CourseView[] = [
       "Divisa inclusa",
       "Genitori possono assistere",
     ],
-    icon: <span>🥋</span>,
+    icon: ICON_TKD,
     isPrimary: true,
   },
   {
@@ -106,7 +124,7 @@ const courses: CourseView[] = [
       "Sviluppo dell'istinto difensivo",
       "Controllo dello stress",
     ],
-    icon: <span>🛡️</span>,
+    icon: ICON_SHIELD,
     isPrimary: false,
   },
   {
@@ -132,22 +150,40 @@ const courses: CourseView[] = [
       "Aumento flessibilità",
       "Tecniche di respirazione",
     ],
-    icon: <span>🧘</span>,
+    icon: ICON_PILATES,
     isPrimary: false,
   },
 ];
 
-export default function CoursesList() {
-  const [mainCourse, ...otherCourses] = courses;
+export default React.memo(function CoursesList(): JSX.Element {
+  // split in modo memoized per evitare ricomputazioni
+  const [mainCourse, otherCourses] = useMemo(() => {
+    const [first, ...rest] = COURSES;
+    return [first, rest] as const;
+  }, []);
 
   return (
-    <ul className="flex flex-col items-center justify-center w-full mx-auto md:gap-y-10">
-      <CourseCard key={mainCourse.id} course={mainCourse} />
-      <div className="flex flex-col items-center justify-center md:flex-row md:gap-6 w-full">
-        {otherCourses.map((course) => (
-          <CourseCard key={course.id} course={course} />
-        ))}
-      </div>
-    </ul>
+    <section
+      id="courses-section"
+      aria-labelledby="courses-section"
+      className="w-full"
+    >
+      <h2 id="courses-section" className="sr-only">
+        I nostri corsi
+      </h2>
+
+      <ul
+        role="list"
+        className="flex flex-col items-center justify-center w-full mx-auto md:gap-y-10"
+      >
+        <CourseCard key={mainCourse.id} course={mainCourse} />
+
+        <div className="flex flex-col items-center justify-center md:flex-row md:gap-6 md:items-start w-full">
+          {otherCourses.map((course) => (
+            <CourseCard course={course} />
+          ))}
+        </div>
+      </ul>
+    </section>
   );
-}
+});

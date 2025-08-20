@@ -1,3 +1,4 @@
+import CourseCardFreeLesson from "./CourseCardFreeLesson";
 import CoursesHeader from "./CoursesHeader";
 import CoursesList from "./CoursesList";
 import CoursesTag from "./CoursesTag";
@@ -8,6 +9,7 @@ export default function Courses() {
       <CoursesTag />
       <CoursesHeader />
       <CoursesList />
+      <CourseCardFreeLesson />
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import About from "../../components/About";
+import Courses from "../../components/Courses";
 import Header from "../../components/Header";
 import Results from "../../components/Results";
 
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Header />
       <About />
       <Results />
+      <Courses />
     </div>
   );
 }

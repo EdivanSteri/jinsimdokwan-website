@@ -168,7 +168,7 @@ export default React.memo(function CoursesList(): JSX.Element {
       aria-labelledby="courses-section"
       className="w-full"
     >
-      <h2 id="courses-section" className="sr-only">
+      <h2 className="sr-only">
         I nostri corsi
       </h2>
 
@@ -178,11 +178,11 @@ export default React.memo(function CoursesList(): JSX.Element {
       >
         <CourseCard key={mainCourse.id} course={mainCourse} />
 
-        <div className="flex flex-col items-center justify-center md:flex-row md:gap-6 md:items-start w-full">
+        <ul role="list" className="flex flex-col items-center justify-center md:flex-row md:gap-6 md:items-start w-full">
           {otherCourses.map((course) => (
             <CourseCard course={course} />
           ))}
-        </div>
+        </ul>
       </ul>
     </section>
   );

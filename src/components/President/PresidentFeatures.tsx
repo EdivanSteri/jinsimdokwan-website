@@ -25,13 +25,18 @@ export default function PresidentFeatures({
     [data, featureType]
   );
 
+  const ariaLabelGrid =
+    featureType === "highlight"
+      ? "Qualifiche dell'istruttrice"
+      : "Specialità dell'istruttrice";
+
   const featuresGrid = (
     <div
       className={`grid grid-cols-1 ${
         featureType === "highlight" ? "sm" : "md"
       }:grid-cols-2 gap-4 items-stretch`}
       role="list"
-      aria-label="Qualifiche dell'istruttrice"
+      aria-label={ariaLabelGrid}
     >
       {items}
     </div>
@@ -40,7 +45,7 @@ export default function PresidentFeatures({
   if (featureType === "highlight") return featuresGrid;
 
   return (
-    <section
+    <div
       aria-labelledby="president-specialities-title"
       className="p-8 lg:p-16 bg-red-600/15 rounded-3xl border border-red-600/20"
     >
@@ -53,6 +58,6 @@ export default function PresidentFeatures({
         </p>
       </div>
       {featuresGrid}
-    </section>
+    </div>
   );
 }

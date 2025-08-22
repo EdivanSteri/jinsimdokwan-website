@@ -15,7 +15,7 @@ export default React.memo(function PresidentInstructorHilight({
   const Icon = item.icon;
 
   return (
-    <div className="w-full p-4 rounded-xl flex flex-col items-start justify-between gap-y-2 bg-white/5 backdrop-blur-sm border border-white/10 group hover:bg-white/10 transition duration-300 ease-in-out">
+    <div role="listitem" className="w-full p-4 rounded-xl flex flex-col items-start justify-between gap-y-2 bg-white/5 backdrop-blur-sm border border-white/10 group hover:bg-white/10 transition duration-300 ease-in-out">
       <div className="flex items-center justify-start gap-x-3">
         <div
           className={`flex items-center justify-center w-10 h-10 ${item.iconBgColor} rounded-lg transform group-hover:scale-110 transition duration-300 ease-in-out`}

@@ -8,7 +8,7 @@ export default function PresidentCard() {
 
       <div className="w-full h-full relative flex items-end justify-center rounded-2xl overflow-hidden">
         <img
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center "
           src="/boss.jpg"
           alt="president image"
         />

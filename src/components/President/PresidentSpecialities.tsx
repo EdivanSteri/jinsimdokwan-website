@@ -1,3 +1,4 @@
+import React, { useMemo, type JSX } from "react";
 import {
   AcademicCapIcon,
   MapIcon,
@@ -13,7 +14,7 @@ export type InstructorSpeciality = {
   subTitle: string;
 };
 
-const instructorSpecialitiesItems: InstructorSpeciality[] = [
+const instructorSpecialitiesItems: ReadonlyArray<InstructorSpeciality> = [
   {
     id: 0,
     icon: AcademicCapIcon,
@@ -41,20 +42,36 @@ const instructorSpecialitiesItems: InstructorSpeciality[] = [
   },
 ];
 
-export default function PresidentSpecialities() {
+export default React.memo(function PresidentSpecialities(): JSX.Element {
+  const items = useMemo(
+    () =>
+      instructorSpecialitiesItems.map((speciality) => (
+        <PresidentSpecialityItem key={speciality.id} hilight={speciality} />
+      )),
+    []
+  );
+
   return (
-    <div className="p-8 lg:p-16 bg-red-600/15 rounded-3xl border border-red-600/20">
-      <div className=" text-center mb-8 flex flex-col items-center justify-center gap-y-2">
-        <h3 className="text-2xl font-bold">Le Sue Specialità</h3>
+    <section
+      aria-labelledby="president-specialities-title"
+      className="p-8 lg:p-16 bg-red-600/15 rounded-3xl border border-red-600/20"
+    >
+      <div className="text-center mb-8 flex flex-col items-center justify-center gap-y-2">
+        <h3 id="president-specialities-title" className="text-2xl font-bold">
+          Le Sue Specialità
+        </h3>
         <p className="text-sm font-medium text-gray-300">
           Expertise e competenze che la rendono unica
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-center gap-y-4">
-        {instructorSpecialitiesItems.map((speciality) => (
-          <PresidentSpecialityItem key={speciality.id} hilight={speciality} />
-        ))}
+
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center gap-y-4"
+        role="list"
+        aria-label="Specialità dell'istruttrice"
+      >
+        {items}
       </div>
-    </div>
+    </section>
   );
-}
+});

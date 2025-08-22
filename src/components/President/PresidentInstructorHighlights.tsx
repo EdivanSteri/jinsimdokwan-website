@@ -1,3 +1,4 @@
+import React, { useMemo, type JSX } from "react";
 import {
   AcademicCapIcon,
   FireIcon,
@@ -14,7 +15,7 @@ export type InstructorHighlight = {
   subTitle: string;
 };
 
-const instructorHilightsItems: InstructorHighlight[] = [
+const instructorHilightsItems: ReadonlyArray<InstructorHighlight> = [
   {
     id: 0,
     icon: TrophyIcon,
@@ -45,12 +46,19 @@ const instructorHilightsItems: InstructorHighlight[] = [
   },
 ];
 
-export default function PresidentInstructorHighlights() {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start justify-center gap-y-4">
-      {instructorHilightsItems.map((hilight) => (
+export default React.memo(function PresidentInstructorHighlights(): JSX.Element {
+  // memoizziamo gli elementi per non ricrearli ad ogni render del genitore
+  const items = useMemo(
+    () =>
+      instructorHilightsItems.map((hilight) => (
         <PresidentInstructorHilightItem key={hilight.id} hilight={hilight} />
-      ))}
+      )),
+    []
+  );
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" role="list" aria-label="Qualifiche dell'istruttrice">
+      {items}
     </div>
   );
-}
+});

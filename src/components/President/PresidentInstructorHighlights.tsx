@@ -47,7 +47,7 @@ const instructorHilightsItems: InstructorHighlight[] = [
 
 export default function PresidentInstructorHighlights() {
   return (
-    <div className="grid grid-cols-1 items-start justify-center gap-y-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start justify-center gap-y-4">
       {instructorHilightsItems.map((hilight) => (
         <PresidentInstructorHilightItem key={hilight.id} hilight={hilight} />
       ))}

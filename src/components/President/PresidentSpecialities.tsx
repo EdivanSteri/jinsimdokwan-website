@@ -43,14 +43,14 @@ const instructorSpecialitiesItems: InstructorSpeciality[] = [
 
 export default function PresidentSpecialities() {
   return (
-    <div className="p-8 bg-red-600/15 rounded-3xl border border-red-600/20">
+    <div className="p-8 lg:p-16 bg-red-600/15 rounded-3xl border border-red-600/20">
       <div className=" text-center mb-8 flex flex-col items-center justify-center gap-y-2">
         <h3 className="text-2xl font-bold">Le Sue Specialità</h3>
         <p className="text-sm font-medium text-gray-300">
           Expertise e competenze che la rendono unica
         </p>
       </div>
-      <div className="grid grid-cols-1 items-start justify-center gap-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start justify-center gap-y-4">
         {instructorSpecialitiesItems.map((speciality) => (
           <PresidentSpecialityItem key={speciality.id} hilight={speciality} />
         ))}

@@ -46,6 +46,7 @@ export default React.memo(function CourseCard({
 
   return (
     <li
+      role="listitem"
       className={`mb-6 flex flex-col items-center justify-center w-full ${containerMaxWidth}`}
     >
       <article

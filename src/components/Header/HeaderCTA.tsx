@@ -3,7 +3,7 @@ import IconButton from "../ui/IconButton";
 
 export default function HeaderCTA() {
   const baseClass =
-    '"w-full sm:w-lg h-11.5 px-4 py-8 sm:text-base transition duration-300 ease-in-out hover:-translate-y-[2px]';
+    'w-full sm:w-lg h-11.5 px-4 py-8 sm:text-base transition duration-300 ease-in-out hover:-translate-y-[2px]';
 
   return (
     <span className="px-4 w-full flex flex-col items-center justify-center gap-y-4 sm:flex-row sm:w-sm sm:gap-x-4 lg:px-0">

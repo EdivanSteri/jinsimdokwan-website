@@ -33,8 +33,8 @@ export default function PresidentFeatures({
   const featuresGrid = (
     <div
       className={`grid grid-cols-1 ${
-        featureType === "highlight" ? "sm" : "md"
-      }:grid-cols-2 gap-4 items-stretch`}
+        featureType === "highlight" ? "sm:grid-cols-2" : "md:grid-cols-2"
+      }  gap-4 items-stretch`}
       role="list"
       aria-label={ariaLabelGrid}
     >

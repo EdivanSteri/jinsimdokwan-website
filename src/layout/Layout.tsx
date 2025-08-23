@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Navbar from "../components/Navbar";
 import MobileMenuWrapper from "../components/Navbar/MobileMenuWrapper";
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 export default function Layuot() {
   const [menuMobileIsOpen, setMenuMobileIsOpen] = useState<boolean>(false);
@@ -21,6 +22,7 @@ export default function Layuot() {
         {menuMobileIsOpen && <MobileMenuWrapper />}
       </div>
       <Outlet />
+      <Footer />
     </div>
   );
 }

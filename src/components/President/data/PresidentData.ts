@@ -40,7 +40,7 @@ export const hilightsItems: ReadonlyArray<InstructorItem> = [
     subTitle: "Accademia Nazionale",
     kind: "highlight",
   },
-];
+] as const;
 
 export const specialitiesItems: ReadonlyArray<InstructorItem> = [
   {
@@ -72,4 +72,4 @@ export const specialitiesItems: ReadonlyArray<InstructorItem> = [
     subTitle: "Tecniche pratiche per la vita quotidiana e situazioni reali",
     kind: "speciality",
   },
-];
+] as const;

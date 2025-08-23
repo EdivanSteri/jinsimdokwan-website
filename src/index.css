@@ -1,1 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-pacifico: "Pacifico", serif;
+
+  --breakpoint-xs: 460px;
+}

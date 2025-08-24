@@ -1,21 +1,12 @@
-import React, { memo } from "react";
+import React from "react";
 import type { JSX } from "react";
 import type { Partner } from "./data/PartnerTypes";
-
-/**
- * Ottimizzazioni principali:
- * - Reso semantico: il componente restituisce <li> così può essere usato direttamente in una <ul>.
- * - Lazy-loading dell'immagine, decoding async.
- * - Gestione condizionale del background dell'immagine (usa partner.darkBackground o un id speciale).
- * - Evitato rendering di label vuote.
- * - `memo` per evitare re-render quando le props non cambiano.
- */
 
 type PartnerCardProps = {
   partner: Partner;
 };
 
-export default memo(function PartnerCard({
+export default React.memo(function PartnerCard({
   partner,
 }: PartnerCardProps): JSX.Element {
   return (

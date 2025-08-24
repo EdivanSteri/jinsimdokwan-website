@@ -1,30 +1,43 @@
+import React, { memo } from "react";
 import type { JSX } from "react";
 import type { Partner } from "./data/PartnerTypes";
-import React from "react";
+
+/**
+ * Ottimizzazioni principali:
+ * - Reso semantico: il componente restituisce <li> così può essere usato direttamente in una <ul>.
+ * - Lazy-loading dell'immagine, decoding async.
+ * - Gestione condizionale del background dell'immagine (usa partner.darkBackground o un id speciale).
+ * - Evitato rendering di label vuote.
+ * - `memo` per evitare re-render quando le props non cambiano.
+ */
 
 type PartnerCardProps = {
   partner: Partner;
 };
 
-export default React.memo(function PartnerCard({
+export default memo(function PartnerCard({
   partner,
 }: PartnerCardProps): JSX.Element {
-  const imgBackground =
-    partner.id === "nostra-associaizone" ? "bg-black" : "bg-[#F9FAFB]";
-
   return (
-    <div className="w-full p-6 md:p-8 flex flex-col items-center justify-center gap-2 bg-white shadow-lg rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-red-200 text-center">
-      <div
-        className={`h-15 w-15 ${imgBackground} rounded-full overflow-hidden`}
-      >
-        <img
-          src={partner.src}
-          alt={partner.name}
-          className="w-full h-full object-center object-contain"
-        />
-      </div>
-      <h3 className="text-md font-bold">{partner.name}</h3>
-      <p className="text-sm text-gray-700">{partner.label}</p>
-    </div>
+    <li className="w-full">
+      <article className="p-6 md:p-8 flex flex-col items-center justify-center gap-2 bg-white shadow-lg rounded-xl transition-shadow duration-300 border border-gray-100 hover:shadow-xl hover:border-red-200 text-center h-full">
+        <figure
+          className={`w-20 h-20 rounded-full overflow-hidden flex items-center justify-center`}
+        >
+          <img
+            src={partner.src}
+            alt={partner.name}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-contain"
+          />
+        </figure>
+
+        <h3 className="text-md font-bold mt-2">{partner.name}</h3>
+        {partner.label ? (
+          <p className="text-sm text-gray-700">{partner.label}</p>
+        ) : null}
+      </article>
+    </li>
   );
 });

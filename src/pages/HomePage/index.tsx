@@ -1,12 +1,11 @@
 import About from "../../components/About";
 import Courses from "../../components/Courses";
 import Header from "../../components/Header";
+import Partners from "../../components/Partners";
 import President from "../../components/President";
 import Results from "../../components/Results";
 
 export default function HomePage() {
-
-
   return (
     <div className="bg-[#FEFEFE]">
       <Header />
@@ -14,6 +13,7 @@ export default function HomePage() {
       <Results />
       <Courses />
       <President />
+      <Partners />
     </div>
   );
 }

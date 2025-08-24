@@ -21,7 +21,7 @@ export default function AboutPartnersWrapper() {
         "Siamo orgogliosi di far parte del Team Taekwondo Sardegna, una rete di eccellenza che unisce le migliori palestre del territorio per promuovere i valori del Taekwondo.",
       site: "http://www.tkdsardegna.com/",
       textCTASite: "Visita il sito del Team",
-      image: "/tkd sarsegna logo.png",
+      image: "/tkd sardegna logo.png",
     },
   ];
 

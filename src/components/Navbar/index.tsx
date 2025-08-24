@@ -1,7 +1,7 @@
 import { Bars3Icon, PhoneIcon, XMarkIcon } from "@heroicons/react/16/solid";
 import logo from "/logo.png";
 import NavLinks from "./NavLinks";
-import IconButton from "../ui/IconButton";
+import IconButton from "../ui/Icons/IconButton";
 
 type NavbarProps = {
   menuMobileIsOpen: boolean;

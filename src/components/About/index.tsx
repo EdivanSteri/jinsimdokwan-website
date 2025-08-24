@@ -4,7 +4,7 @@ import AboutDescription from "./AboutDescription";
 import AboutHeading from "./AboutHeading";
 import AboutPartnersWrapper from "./AboutPartnersWrapper";
 import AboutSubHeading from "./AboutSubHeading";
-import IconButton from "../ui/IconButton";
+import IconButton from "../ui/Icons/IconButton";
 
 export default function About() {
   return (

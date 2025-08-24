@@ -1,5 +1,5 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import SocialIcon from "../ui/SocialIcon";
+import SocialIcon from "../ui/Icons/SocialIcon";
 import React, { type JSX } from "react";
 
 const socialLinks = [

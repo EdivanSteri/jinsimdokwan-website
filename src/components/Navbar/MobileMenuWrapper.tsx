@@ -1,6 +1,6 @@
 import { PhoneIcon } from "@heroicons/react/16/solid";
 import NavLinks from "./NavLinks";
-import IconButton from "../ui/IconButton";
+import IconButton from "../ui/Icons/IconButton";
 
 export default function MobileMenuWrapper() {
   return (

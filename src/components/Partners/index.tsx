@@ -10,7 +10,7 @@ export default React.memo(function Partners(): JSX.Element {
     <section
       id="partners"
       aria-labelledby={headingId}
-      className="px-4 sm:px-6 lg:px-16 my-16"
+      className="px-4 sm:px-6 lg:px-16 my-18 flex flex-col gap-6"
     >
       <div className="flex flex-col items-center justify-center gap-2 text-center">
         <h2 id={headingId} className="text-xl font-bold">

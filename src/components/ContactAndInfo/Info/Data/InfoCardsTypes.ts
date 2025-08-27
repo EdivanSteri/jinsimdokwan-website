@@ -17,6 +17,7 @@ export type Address = {
   readonly lat: number;
   readonly lng: number;
   readonly placeId?: string;
+  readonly placeName?: string;
 };
 
 /** item che rappresenta un indirizzo */

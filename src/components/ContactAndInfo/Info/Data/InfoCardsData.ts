@@ -12,6 +12,7 @@ const address = {
   lat: 39.2661967,
   lng: 9.1695305,
   placeId: "ChIJV-cObN01RhMRCwcz0dcZKko",
+  placeName: "Jin Sim Do Kwan Taekwon-Do ITF",
 } as const;
 
 /** card principale con indirizzo, telefono, email e orari */

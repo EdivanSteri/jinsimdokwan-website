@@ -36,7 +36,7 @@ export const footerData: ReadonlyArray<FooterColumn> = [
         kind: "link",
         id: "contatti",
         text: "Contatti",
-        href: "#contatti",
+        href: "#contact-and-info",
         ariaLabel: "Contattaci",
       },
     ],

@@ -81,7 +81,7 @@ export default React.memo(function FooterColumnItems({
         <li>
           <a
             href={item.href}
-            className={`${TEXT_CLASSES} hover:underline`}
+            className={`${TEXT_CLASSES} transition duration-300 ease-in-out hover:underline hover:text-red-700`}
             aria-label={item.ariaLabel ?? item.text}
             {...(isExternal(item.href)
               ? { target: "_blank", rel: "noopener noreferrer" }
@@ -95,7 +95,7 @@ export default React.memo(function FooterColumnItems({
     case "text":
       return (
         <li>
-          <span className={TEXT_CLASSES}>{item.text}</span>
+          <span className={`${TEXT_CLASSES} transition duration-300 ease-in-out hover:text-red-700`}>{item.text}</span>
         </li>
       );
 

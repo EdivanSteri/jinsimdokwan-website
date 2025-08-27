@@ -17,7 +17,7 @@ export default React.memo(function SocialIcon({
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 bg-[#1F2937] rounded-full flex items-center justify-center transition hover:scale-110 duration-300 ease-in-out"
+      className="w-10 h-10 bg-[#1F2937] rounded-full flex items-center justify-center transition hover:bg-[#D22323] hover:scale-110 duration-300 ease-in-out"
     >
       <Icon size={18} aria-hidden="true" />
       <span className="sr-only">{label}</span>

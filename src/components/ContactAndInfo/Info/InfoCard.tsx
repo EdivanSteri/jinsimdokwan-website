@@ -16,11 +16,9 @@ export default React.memo(function InfoCard(): JSX.Element {
   const TitleIcon = title.icon as React.ElementType;
 
   const renderedItems = useMemo(() => {
-    // sposto l'inizializzazione di `items` dentro il callback per evitare dipendenze instabili
     const items: ReadonlyArray<InfoCardItem> = infoItems ?? [];
 
     return items.map((item, idx) => {
-      // chiave stabile: testo/indirizzo/orario o fallback su idx
       const baseKey =
         (item.type === "simple" && item.text) ||
         (item.type === "address" && item.address?.street) ||
@@ -28,16 +26,17 @@ export default React.memo(function InfoCard(): JSX.Element {
         idx;
       const key = `${String(baseKey)}-${item.type}-${idx}`;
 
-      // tutte le variant estendono IconTitle => hanno `icon`
       const Icon = item.icon as React.ElementType | undefined;
 
+      // ogni elemento è un listitem per migliorare la semantica
       switch (item.type) {
         case "address": {
           const addressItem = item as AddressCard;
           const addr = addressItem.address;
           return (
-            <div
+            <li
               key={key}
+              role="listitem"
               className="flex items-center justify-start gap-x-2 text-sm sm:text-base"
             >
               {Icon ? (
@@ -51,7 +50,7 @@ export default React.memo(function InfoCard(): JSX.Element {
                   {addr?.province ? `(${addr.province})` : ""}
                 </address>
               </div>
-            </div>
+            </li>
           );
         }
 
@@ -59,8 +58,9 @@ export default React.memo(function InfoCard(): JSX.Element {
           const oh = item as OpeningHoursCard;
           const ohItems: ReadonlyArray<OpeningHoursEntry> = oh.items ?? [];
           return (
-            <div
+            <li
               key={key}
+              role="listitem"
               className="flex items-start justify-start gap-x-2 text-sm sm:text-base"
             >
               {Icon ? (
@@ -97,7 +97,7 @@ export default React.memo(function InfoCard(): JSX.Element {
                   })}
                 </div>
               </div>
-            </div>
+            </li>
           );
         }
 
@@ -105,8 +105,9 @@ export default React.memo(function InfoCard(): JSX.Element {
           const simple = item as SimpleInfo;
           const content = simple.content ?? simple.text ?? "";
           return (
-            <div
+            <li
               key={key}
+              role="listitem"
               className="flex items-center justify-start gap-x-2 text-sm sm:text-base"
             >
               {Icon ? (
@@ -123,46 +124,45 @@ export default React.memo(function InfoCard(): JSX.Element {
               ) : (
                 <span className="font-medium">{content}</span>
               )}
-            </div>
+            </li>
           );
         }
 
         default: {
-          // fallback sicuro: se arriva un tipo non gestito, prova a leggere "text" in modo sicuro
           const text = "text" in item ? (item as InfoCardItem).text ?? "" : "";
           return (
-            <div
+            <li
               key={key}
+              role="listitem"
               className="flex items-center justify-start gap-x-2 text-sm sm:text-base"
             >
               {Icon ? (
                 <Icon className="w-4 h-4 text-[#EF4440]" aria-hidden="true" />
               ) : null}
               <span className="font-medium">{text}</span>
-            </div>
+            </li>
           );
         }
       }
     });
-    // dipendenza: infoItems (se infoItems è una costante importata, è stabile)
   }, [infoItems]);
 
   return (
-    <div
+    <section
       aria-labelledby="info-card-title"
       className="text-left bg-[#18202F] rounded-2xl p-6 flex flex-col gap-4 border border-white/20"
       role="region"
     >
       <div className="flex items-center justify-start gap-x-2">
         <TitleIcon className="w-5 h-5 text-[#EF4440]" aria-hidden="true" />
-        <span id="info-card-title" className="font-bold text-md sm:text-base">
+        <h3 id="info-card-title" className="font-bold text-base sm:text-lg">
           {title.text}
-        </span>
+        </h3>
       </div>
 
-      <div className="flex flex-col gap-2" role="list" aria-label={title.text}>
+      <ul className="flex flex-col gap-2" role="list" aria-label={title.text}>
         {renderedItems}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 });

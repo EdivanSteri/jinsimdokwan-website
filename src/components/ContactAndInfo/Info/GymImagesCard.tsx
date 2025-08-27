@@ -8,40 +8,46 @@ export default React.memo(function GymImagesCard(): JSX.Element {
   const TitleIcon = title.icon as React.ElementType;
 
   return (
-    <div
-      aria-labelledby="info-card-title"
+    <section
+      aria-labelledby="gym-images-title"
       className="text-left bg-[#18202F] rounded-2xl p-6 flex flex-col gap-4 border border-white/20"
       role="region"
     >
       <div className="flex items-center justify-start gap-x-2">
         <TitleIcon className="w-5 h-5 text-[#EF4440]" aria-hidden="true" />
-        <span id="info-card-title" className="font-bold text-md sm:text-base">
+        <h3 id="gym-images-title" className="font-bold text-base sm:text-lg">
           {title.text}
-        </span>
+        </h3>
       </div>
 
-      <div
-        className="grid grid-cols-2 items-stretch gap-4 over"
+      <ul
+        className="grid grid-cols-2 items-stretch gap-4"
         role="list"
         aria-label={title.text}
       >
-        {images.map((image) => (
-          <div
-            key={image.id}
-            className={`${
-              image.id === "background-01" ? "col-span-2 h-24 md:h-32" : "h-20 md:h-24"
-            } rounded-xl overflow-hidden group`}
-          >
-            <img
-              className={`w-full object-center object-cover transition-transform duration-300 ease-in-out group-hover:scale-110`}
-              src={image.src}
-              alt={image.alt}
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+        {images.map((image, index) => {
+          const isHero = index === 0;
+          const wrapperClasses = isHero
+            ? "col-span-2 h-24 md:h-32"
+            : "h-20 md:h-24";
+
+          return (
+            <li
+              key={image.id}
+              role="listitem"
+              className={`${wrapperClasses} rounded-xl overflow-hidden group`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-center object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+              />
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 });

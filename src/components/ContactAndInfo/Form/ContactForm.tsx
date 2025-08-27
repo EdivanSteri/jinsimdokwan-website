@@ -45,7 +45,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="text-left bg-[#18202F] rounded-2xl p-6 flex flex-col gap-6 border border-white/20"
+      className="h-fit text-left bg-[#18202F] rounded-2xl p-6 flex flex-col gap-6 border border-white/20"
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <h3 className="text-xl font-bold">Prenota la Tua lezione di Prova</h3>

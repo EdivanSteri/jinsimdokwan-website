@@ -64,7 +64,7 @@ export default React.memo(function MapCard(): JSX.Element {
         ) : isLoaded && coords ? (
           <>
             <GoogleMap
-              mapContainerClassName="w-full h-40 sm:h-80 md:h-96 rounded-lg overflow-hidden"
+              mapContainerClassName="w-full h-40 md:h-48 rounded-lg overflow-hidden"
               center={coords}
               zoom={15}
               options={mapOptions}

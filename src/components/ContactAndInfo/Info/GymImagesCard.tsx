@@ -29,7 +29,7 @@ export default React.memo(function GymImagesCard(): JSX.Element {
           <div
             key={image.id}
             className={`${
-              image.id === "background-01" ? "col-span-2" : ""
+              image.id === "background-01" ? "col-span-2 h-24 md:h-32" : "h-20 md:h-24"
             } rounded-xl overflow-hidden group`}
           >
             <img

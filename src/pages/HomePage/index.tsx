@@ -1,4 +1,5 @@
 import About from "../../components/About";
+import ContactAndInfo from "../../components/ContactAndInfo";
 import Courses from "../../components/Courses";
 import Header from "../../components/Header";
 import Partners from "../../components/Partners";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Results />
       <Courses />
       <President />
+      <ContactAndInfo />
       <Partners />
     </div>
   );

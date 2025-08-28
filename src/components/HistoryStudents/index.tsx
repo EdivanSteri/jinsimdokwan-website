@@ -27,7 +27,7 @@ export default React.memo(function HistoryStudents({
 
   return (
     <section
-      id="history-students"
+      id="storie"
       className="px-4 sm:px-6 md:px-8 lg:px-4 xl:px-16 2xl:px-30 py-10"
       aria-labelledby="history-students-title"
     >

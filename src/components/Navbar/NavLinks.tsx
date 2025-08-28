@@ -6,11 +6,11 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { label: "Chi Siamo", to: "#chi-siamo" },
-  { label: "Corsi", to: "#corsi" },
-  { label: "Presidente", to: "#presidente" },
-  { label: "Le Nostre Storie", to: "#storie" },
-  { label: "Contatti", to: "#contatti" },
+  { label: "Chi Siamo", to: "/#chi-siamo" },
+  { label: "Corsi", to: "/#corsi" },
+  { label: "Presidente", to: "/#presidente" },
+  { label: "Le Nostre Storie", to: "/#storie" },
+  { label: "Contatti", to: "/#contact-info" },
 ];
 
 export default function NavLinks() {

@@ -20,6 +20,7 @@ export default function MobileMenuWrapper() {
             lg:transition lg:duration-300 lg:ease-in-out lg:hover:-translate-y-[2px]
           `}
           icon={PhoneIcon}
+          href="/#contact-info"
         >
           Prenota Lezione Gratuita
         </IconButton>

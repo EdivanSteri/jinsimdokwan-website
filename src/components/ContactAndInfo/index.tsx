@@ -8,7 +8,7 @@ import MapCard from "./Info/MapCard";
 export default React.memo(function ContactAndInfo(): JSX.Element {
   return (
     <section
-      id="contact-and-info"
+      id="contact-info"
       aria-labelledby="contact-info-heading"
       className="px-4 sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 py-10 bg-black text-white"
       role="region"

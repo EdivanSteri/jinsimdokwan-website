@@ -13,6 +13,7 @@ export default function HeaderCTA() {
           bg-gradient-to-r from-[#D92525] to-[#B91C1C] hover:from-[#c32121] hover:to-[#a71919]
         `}
         icon={PlayCircleIcon}
+        href="/#contact-info"
       >
         Inizia Oggi
       </IconButton>
@@ -23,6 +24,7 @@ export default function HeaderCTA() {
           border
         `}
         icon={EyeIcon}
+        href="/#corsi"
       >
         Scopri i Corsi
       </IconButton>

@@ -12,7 +12,7 @@ export default React.memo(function Footer(): JSX.Element {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="corsi" className={CONTAINER}>
+    <footer className={CONTAINER}>
       <div className={GRID}>
         <div className="flex flex-col gap-4 items-center justify-center md:items-start">
           <p className="text-xl font-bold">A.S.D. JinSimDoKwan</p>

@@ -74,6 +74,7 @@ export default React.memo(function CourseCard({
                 transition duration-300 ease-in-out hover:-translate-y-[2px]
               `}
               icon={CalendarDaysIcon}
+              href="/#contact-info"
             >
               Prenota Lezione Gratuita
             </IconButton>

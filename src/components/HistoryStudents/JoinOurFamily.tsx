@@ -1,8 +1,10 @@
 import { HiOutlineRocketLaunch, HiOutlineSparkles } from "react-icons/hi2";
 import { MoveRightIcon } from "lucide-react";
 import React, { type JSX } from "react";
+import { HashLink } from "react-router-hash-link";
 
 export default React.memo(function JoinOurFamily(): JSX.Element {
+  
   return (
     <div
       className="relative my-20 flex w-full items-center justify-center 
@@ -37,8 +39,9 @@ export default React.memo(function JoinOurFamily(): JSX.Element {
           </p>
         </div>
 
-        <button
-          type="button"
+        <HashLink
+          to="/#contact-info"
+          smooth
           aria-label="Inizia il tuo viaggio"
           className="mt-4 flex items-center gap-3 text-md sm:text-lg md:text-xl lg:text-2xl font-bold text-white
                      bg-gradient-to-r from-[#EF4444] to-[#DC2626] hover:from-[#DC2626] hover:to-[#B91C1C]
@@ -58,7 +61,7 @@ export default React.memo(function JoinOurFamily(): JSX.Element {
             className="group-hover:translate-x-2 transition-all duration-300 ease-in-out"
             aria-hidden="true"
           />
-        </button>
+        </HashLink>
       </div>
     </div>
   );

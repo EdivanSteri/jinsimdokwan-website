@@ -26,6 +26,7 @@ export default React.memo(function PresidentCTA(): JSX.Element {
         className={primaryClass}
         icon={UserPlusIcon}
         aria-label="Scopri la sua storia"
+        href=""
       >
         Scopri la sua Storia
       </IconButton>
@@ -34,6 +35,7 @@ export default React.memo(function PresidentCTA(): JSX.Element {
         className={secondaryClass}
         icon={ChatBubbleBottomCenterTextIcon}
         aria-label="Avvia una conversazione con la presidente"
+        href="/#contact-info"
       >
         Parla con Lei
       </IconButton>

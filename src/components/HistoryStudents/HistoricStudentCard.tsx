@@ -1,8 +1,9 @@
 import type { JSX } from "react";
 import { BiMedal } from "react-icons/bi";
-import type { HistoryStudent } from "../HistoryStudents/Data/HistoryStudentsTypes";
+import type { HistoryStudent } from "./Data/HistoryStudentsTypes";
 import { Circle, Clock, MoveRight } from "lucide-react";
 import React from "react";
+import { Link } from "react-router";
 
 type HistoricStudentProps = {
   student: HistoryStudent;
@@ -134,14 +135,14 @@ export default React.memo(function HistoricStudentCard({
 
           {/* Bottom Button */}
           {storiesNumber === "preview" && (
-            <button
-              type="button"
+            <Link
+              to="/stories  "
               className="w-full flex items-center justify-start text-left gap-2 text-red-500 font-semibold text-sm sm:text-base cursor-pointer group/readmore focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
               aria-label={`Continua a leggere la storia di ${student.personalInfo.name}`}
             >
               <span>Continua a leggere</span>
               <MoveRight className="transition-transform duration-300 ease-in-out group-hover/readmore:translate-x-2" />
-            </button>
+            </Link>
           )}
         </div>
       </div>

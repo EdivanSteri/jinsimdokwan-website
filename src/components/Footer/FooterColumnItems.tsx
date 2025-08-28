@@ -1,6 +1,7 @@
 import React from "react";
 import type { JSX } from "react";
 import type { FooterElement } from "./data/footerTypes";
+import { HashLink } from "react-router-hash-link";
 
 type FooterColumnItemsProps = {
   item: FooterElement;
@@ -37,7 +38,6 @@ function Clickable({
   }
 
   return (
-    // non-interactive by default; se deve essere focusable, aggiungi role/button + tabIndex
     <div className="flex items-center gap-x-2" aria-label={ariaLabel}>
       {children}
     </div>
@@ -79,8 +79,9 @@ export default React.memo(function FooterColumnItems({
     case "link":
       return (
         <li>
-          <a
-            href={item.href}
+          <HashLink
+            to={item.href}
+            smooth
             className={`${TEXT_CLASSES} transition duration-300 ease-in-out hover:underline hover:text-red-700`}
             aria-label={item.ariaLabel ?? item.text}
             {...(isExternal(item.href)
@@ -88,7 +89,7 @@ export default React.memo(function FooterColumnItems({
               : {})}
           >
             {item.text}
-          </a>
+          </HashLink>
         </li>
       );
 

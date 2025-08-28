@@ -6,13 +6,13 @@ const socialLinks = [
   {
     id: "facebook",
     Icon: FaFacebookF,
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/TkdJinSim/",
     label: "Facebook JinSimDoKwan",
   },
   {
     id: "instagram",
     Icon: FaInstagram,
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/jinsimdokwan/",
     label: "Instagram JinSimDoKwan",
   },
 ];

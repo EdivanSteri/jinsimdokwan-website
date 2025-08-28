@@ -1,5 +1,5 @@
 import React, { type JSX, useMemo } from "react";
-import HistoricStudentCard from "../Header/HistoricStudentCard";
+import HistoricStudentCard from "./HistoricStudentCard";
 import { historyStudents } from "./Data/HistoryStudentsData";
 import HistoryStudentsHeader from "./HistoryStudentsHeader";
 import HistoryStudentsTag from "./HistoryStudentsTag";

@@ -1,4 +1,6 @@
-export default function HistoryStudentsHeader() {
+import React, { type JSX } from "react";
+
+export default React.memo(function HistoryStudentsHeader(): JSX.Element {
   return (
     <header className="max-w-3xl mx-auto my-6">
       <h2 className="text-4xl text-center text-[#111827] font-bold leading-tight">
@@ -15,4 +17,4 @@ export default function HistoryStudentsHeader() {
       </p>
     </header>
   );
-}
+});

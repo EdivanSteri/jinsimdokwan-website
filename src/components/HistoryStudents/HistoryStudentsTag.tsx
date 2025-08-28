@@ -1,6 +1,8 @@
 import { Circle } from "lucide-react";
+import type { JSX } from "react";
+import React from "react";
 
-export default function HistoryStudentsTag() {
+export default React.memo(function HistoryStudentsTag(): JSX.Element {
   return (
     <div
       className="flex items-center justify-center gap-x-2 text-sm font-bold my-8 
@@ -11,4 +13,4 @@ export default function HistoryStudentsTag() {
       <span className="text-[#B91C1C]">LE NOSTRE STORIE</span>{" "}
     </div>
   );
-}
+});

@@ -2,11 +2,12 @@ import type { JSX } from "react";
 import { BiMedal } from "react-icons/bi";
 import type { HistoryStudent } from "../HistoryStudents/Data/HistoryStudentsTypes";
 import { Circle, Clock, MoveRight } from "lucide-react";
+import React from "react";
 
 type HistoricStudentProps = {
   student: HistoryStudent;
 };
-export default function HistoricStudentCard({
+export default React.memo(function HistoricStudentCard({
   student,
 }: HistoricStudentProps): JSX.Element {
   const bgSyleDynamic =
@@ -112,4 +113,4 @@ export default function HistoricStudentCard({
       ></div>
     </div>
   );
-}
+});

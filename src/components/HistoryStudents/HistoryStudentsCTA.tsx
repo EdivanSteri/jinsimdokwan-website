@@ -1,6 +1,8 @@
 import { MoveRightIcon, UsersRound } from "lucide-react";
+import type { JSX } from "react";
+import React from "react";
 
-export default function HistoryStudentsCTA() {
+export default React.memo(function HistoryStudentsCTA(): JSX.Element {
   return (
     <div className="flex flex-col items-center justify-center text-center">
       <div
@@ -19,4 +21,4 @@ export default function HistoryStudentsCTA() {
       </div>
     </div>
   );
-}
+});

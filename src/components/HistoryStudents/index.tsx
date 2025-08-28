@@ -5,9 +5,11 @@ import HistoryStudentsHeader from "./HistoryStudentsHeader";
 import HistoryStudentsTag from "./HistoryStudentsTag";
 import JoinOurFamily from "./JoinOurFamily";
 import HistoryStudentsCTA from "./HistoryStudentsCTA";
+import type { JSX } from "react";
+import React from "react";
 
-export default function HistoryStudents() {
-  const studentsPreview: HistoryStudent[] = historyStudents.slice(0, 3); // Placeholder per gli studenti storici
+export default React.memo(function HistoryStudents(): JSX.Element {
+  const studentsPreview: HistoryStudent[] = historyStudents.slice(0, 3);
 
   return (
     <section
@@ -25,4 +27,4 @@ export default function HistoryStudents() {
       <JoinOurFamily />
     </section>
   );
-}
+});

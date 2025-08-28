@@ -1,7 +1,8 @@
 import { HiOutlineRocketLaunch, HiOutlineSparkles } from "react-icons/hi2";
 import { MoveRightIcon } from "lucide-react";
+import React, { type JSX } from "react";
 
-export default function JoinOurFamily() {
+export default React.memo(function JoinOurFamily(): JSX.Element {
   return (
     <div
       className="relative my-20 flex w-full items-center justify-center 
@@ -51,4 +52,4 @@ export default function JoinOurFamily() {
       </div>
     </div>
   );
-}
+});

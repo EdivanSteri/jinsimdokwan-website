@@ -2,6 +2,7 @@ import About from "../../components/About";
 import ContactAndInfo from "../../components/ContactAndInfo";
 import Courses from "../../components/Courses";
 import Header from "../../components/Header";
+import HistoryStudents from "../../components/HistoryStudents";
 import Partners from "../../components/Partners";
 import President from "../../components/President";
 import Results from "../../components/Results";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Results />
       <Courses />
       <President />
+      <HistoryStudents />
       <ContactAndInfo />
       <Partners />
     </div>

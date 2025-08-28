@@ -19,7 +19,6 @@ export default React.memo(function ContactForm(): JSX.Element {
   const [formData, setFormData] = useState<ContactFormType>(() => ({
     ...INITIAL_FORM,
   }));
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const [messageLength, setMessageLength] = useState<number>(0);
 
@@ -51,9 +50,6 @@ export default React.memo(function ContactForm(): JSX.Element {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (isSubmitting) return;
-
-    setIsSubmitting(true);
 
     try {
       console.log("Dati inviati:", formData);
@@ -62,8 +58,6 @@ export default React.memo(function ContactForm(): JSX.Element {
       setFormData({ ...INITIAL_FORM });
     } catch (err) {
       console.error("Errore durante l'invio del form:", err);
-    } finally {
-      setIsSubmitting(false);
     }
   }
 
@@ -75,7 +69,6 @@ export default React.memo(function ContactForm(): JSX.Element {
     <form
       onSubmit={handleSubmit}
       aria-labelledby="contact-form-title"
-      aria-busy={isSubmitting}
       className="h-fit text-left bg-[#18202F] rounded-2xl p-6 flex flex-col gap-6 border border-white/20"
       noValidate
     >
@@ -208,12 +201,12 @@ export default React.memo(function ContactForm(): JSX.Element {
 
       <IconButton
         type="submit"
-        disabled={isSubmitting}
         icon={BiCalendarCheck}
         aria-label="Prenota lezione gratuita"
         className="w-full p-2 rounded-xl text-center mt-4 bg-linear-to-r from-[#B91C1C] hover:from-[#a71919] to-[#991B1B] hover:to-[#8a1818] transition duration-300 ease-in-out hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
+        href=""
       >
-        {isSubmitting ? "Invio..." : "Prenota Lezione Gratuita"}
+        Prenota Lezione Gratuita
       </IconButton>
     </form>
   );

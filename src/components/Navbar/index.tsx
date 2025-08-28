@@ -2,6 +2,7 @@ import { Bars3Icon, PhoneIcon, XMarkIcon } from "@heroicons/react/16/solid";
 import logo from "/logo.png";
 import NavLinks from "./NavLinks";
 import IconButton from "../ui/Icons/IconButton";
+import { HashLink } from "react-router-hash-link";
 
 type NavbarProps = {
   menuMobileIsOpen: boolean;
@@ -18,13 +19,13 @@ export default function Navbar({
     <nav className="relative">
       <div className="px-4 py-2  sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 w-full flex items-center justify-between bg-black border-b-[0.1px]">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
+        <HashLink to='/#' smooth className="flex items-center gap-2 cursor-pointer">
           <img src={logo} width={45} height={45} alt="Logo JinSimDoKwan" />
           <div className="flex flex-col-reverse text-white">
             <p className="text-[#D66161] text-sm">A.S.D.</p>
             <p className="font-pacifico text-lg font-extrabold">JinSimDoKwan</p>
           </div>
-        </div>
+        </HashLink>
 
         {/* Menu desktop */}
         <div className="hidden lg:flex justify-center">

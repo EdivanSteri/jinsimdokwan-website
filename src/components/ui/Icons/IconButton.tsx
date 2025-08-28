@@ -1,15 +1,16 @@
 import type { ComponentPropsWithoutRef, JSX } from "react";
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 type IconButtonProps = {
   icon: React.ElementType;
-  onClick?: () => void;
+  href: string;
   children?: React.ReactNode;
-} & ComponentPropsWithoutRef<"button">; // Estende le props di button 
+} & ComponentPropsWithoutRef<"a">; // Estende le props di button
 
 export default React.memo(function IconButton({
   icon,
-  onClick,
+  href,
   children,
   className,
   ...rest
@@ -21,9 +22,14 @@ export default React.memo(function IconButton({
   const combined = base + " " + className;
 
   return (
-    <button type="button" onClick={onClick} className={combined} {...rest}>
+    <HashLink
+      to={href}
+      smooth
+      className={combined}
+      {...rest}
+    >
       <Icon className="w-6 h-6" aria-hidden="true" />
       {children}
-    </button>
+    </HashLink>
   );
 });

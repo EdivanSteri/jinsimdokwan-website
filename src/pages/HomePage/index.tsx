@@ -15,7 +15,7 @@ export default function HomePage() {
       <Results />
       <Courses />
       <President />
-      <HistoryStudents />
+      <HistoryStudents storiesNumber="preview"/>
       <ContactAndInfo />
       <Partners />
     </div>

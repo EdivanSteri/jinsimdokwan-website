@@ -37,6 +37,7 @@ export default function About() {
                 transition duration-300 ease-in-out hover:-translate-y-[2px]
               `}
         icon={PhoneIcon}
+        href="/#contact-info"
       >
         Contattaci Ora
       </IconButton>

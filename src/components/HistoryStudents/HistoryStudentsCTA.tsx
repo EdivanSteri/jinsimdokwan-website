@@ -1,12 +1,14 @@
 import { MoveRightIcon, UsersRound } from "lucide-react";
 import type { JSX } from "react";
 import React from "react";
+import { Link } from "react-router";
 
 export default React.memo(function HistoryStudentsCTA(): JSX.Element {
+
   return (
     <div className="flex flex-col items-center justify-center text-center mt-10">
-      <button
-        type="button"
+      <Link
+        to="/stories"
         aria-label="Leggi tutte le storie"
         className="mt-4 max-w-sm flex items-center justify-center gap-3 
                    text-md sm:text-lg md:text-xl lg:text-2xl font-bold text-white
@@ -24,11 +26,11 @@ export default React.memo(function HistoryStudentsCTA(): JSX.Element {
           <UsersRound />
         </span>
         <span>Leggi Tutte le Storie</span>
-        <MoveRightIcon 
-          className="group-hover:translate-x-2 transition-all duration-300 ease-in-out" 
+        <MoveRightIcon
+          className="group-hover:translate-x-2 transition-all duration-300 ease-in-out"
           aria-hidden="true"
         />
-      </button>
+      </Link>
     </div>
   );
 });

@@ -12,11 +12,11 @@ export default React.memo(function Footer(): JSX.Element {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="corsi" className={CONTAINER}>
+    <footer className={CONTAINER}>
       <div className={GRID}>
         <div className="flex flex-col gap-4 items-center justify-center md:items-start">
           <p className="text-xl font-bold">A.S.D. JinSimDoKwan</p>
-          <p className="text-sm leading-relaxed max-w-md">
+          <p className="text-sm leading-relaxed max-w-md text-gray-300">
             La tua palestra di fiducia per Taekwondo, difesa personale e
             Pilates. Cresci con noi in un ambiente professionale e accogliente.
           </p>
@@ -29,15 +29,15 @@ export default React.memo(function Footer(): JSX.Element {
         ))}
       </div>
 
-      <div className="flex flex-col items-center justify-center md:flex-row md:justify-between gap-2 text-xs">
+      <div className="flex flex-col items-center justify-center md:flex-row md:justify-between gap-2 text-xs text-gray-300">
         <p>© {year} A.S.D. JinSimDoKwan. Tutti i diritti riservati.</p>
 
         <p className="flex items-center gap-x-4">
           {/* Sostituisci gli href con le rotte reali del tuo sito */}
-          <a href="/privacy" className="hover:underline">
+          <a href="/privacy" className="hover:underline hover:text-white">
             Privacy Policy
           </a>
-          <a href="/terms" className="hover:underline">
+          <a href="/terms" className="hover:underline hover:text-white">
             Termini di Servizio
           </a>
         </p>

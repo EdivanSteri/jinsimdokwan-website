@@ -6,9 +6,24 @@ import HistoryStudentsTag from "./HistoryStudentsTag";
 import JoinOurFamily from "./JoinOurFamily";
 import HistoryStudentsCTA from "./HistoryStudentsCTA";
 
-export default React.memo(function HistoryStudents(): JSX.Element {
+type HistoryStudentsProps = {
+  storiesNumber?: "all" | "preview";
+};
+
+export default React.memo(function HistoryStudents({
+  storiesNumber,
+}: HistoryStudentsProps): JSX.Element {
   // Memoizziamo la preview dei primi 3 studenti per evitare slice ad ogni render
-  const studentsPreview = useMemo(() => historyStudents.slice(0, 3), []);
+  const storiesToView = useMemo(
+    () =>
+      storiesNumber === "preview"
+        ? historyStudents.slice(0, 3)
+        : historyStudents,
+    [storiesNumber]
+  );
+
+  const gridColsLg = storiesNumber === "preview" ? "lg:grid-cols-3" : "";
+  const cTAIsVisible = storiesNumber === "preview";
 
   return (
     <section
@@ -22,14 +37,20 @@ export default React.memo(function HistoryStudents(): JSX.Element {
       <HistoryStudentsHeader />
 
       {/* Grid responsiva con gap e allineamento centrato */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 my-10 place-items-center">
-        {studentsPreview.map((student) => (
-          <HistoricStudentCard key={student.id} student={student} />
+      <div
+        className={`grid grid-cols-1 gap-6 md:grid-cols-2 ${gridColsLg} items-stretch my-10 place-items-center`}
+      >
+        {storiesToView.map((student) => (
+          <HistoricStudentCard
+            key={student.id}
+            student={student}
+            storiesNumber={storiesNumber}
+          />
         ))}
       </div>
 
       {/* Call-to-action della sezione */}
-      <HistoryStudentsCTA />
+      {cTAIsVisible && <HistoryStudentsCTA />}
 
       {/* Invito a unirsi alla famiglia della palestra */}
       <JoinOurFamily />

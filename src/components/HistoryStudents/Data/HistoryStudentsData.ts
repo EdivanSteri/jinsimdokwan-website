@@ -215,29 +215,13 @@ export const historyStudents: HistoryStudent[] = [
       name: "Edivan",
       surname: "Steri",
       persomalImage: {
-        url: "/edivan-steri.webp",
+        url: "historicStudents/edivan-steri.webp",
         altText: "Edivan Steri - cintura rossa superiore 1° Kup",
       },
     },
     beltGrade: findBelt("1-Kup"),
     yearsOfPractice: 10,
-    description: `Sono un ragazzo di 23 anni, nato in Brasile e poi adottato all’età di 8 anni.
-      Sono un ragazzo che lavora, da casa propria, per un’azienda di Cremona e faccio il programmatore. Lavoro da ben 2 anni, dal 2022. Mentre mi son diplomato come perito informatico nel 2021.
-      Da sempre lo sport è stata la mia più grande passione, mi diverto, do il 1000×1000, mi rallegra, mi da forza e mi incoraggia nella vita di tutti i giorni.
-      La mia passione più grande è sempre stata il calcio e tutt’ora lo è, ma per motivi vari miei personali non ho potuto seguire quella strada, ma comunque ogni tanto amatorialmente, con i miei amici, organizzo partitelle.
-      Dopo il basket dovevo scegliere uno sport che potessi praticare al chiuso, in un ambiente senza corrente per via di un mio problema all’orecchio, e quindi avevo due scelte sul tavolo. Ballo o arti marziali.
-      Ho scartato subito il ballo. Casualmente, insieme a mia madre, mi son trovato in una palestra che mi dava due opportunità Kick boxing e Taekwondo e senza esitare da quello che mi avevano descritto ho scelto il Taekwondo.
-      Fu così che iniziai a praticare Taekwondo e lo pratico all’incirca dal 2015 da quando avevo 14 anni.
-      Inizialmente lo praticavo giusto perchè dovevo, ed era quasi un obbligo, almeno così lo vedevo. Però posso dire che ne è valsa la pena, dopo già un anno non volevo più smettere e infatti tutt’ora lo pratico.
-      L’arte marziale del taekwondo è veramente bella perchè ci insegna tanto, e questo va a incidere, in bene, nella vita di tutti i giorni.
-      Mi sento fortunato ad aver aver scelto propria quella che palestra nel 2015 che mi ha portato a conoscere il mio Maestro Veronica Placido.
-      Un insegnante che ha portato un senso di famiglia nella propria palestra.
-      Ha un carisma e una froza mentale impressionante che pochissimi altri hanno, è per davvero un esempio di dedizione, sacrificio, forza fisica e mentale. E aggiungerei anche di famiglia.
-      Rispecchia alla perfezione i principi del Taekwondo. Sono certo che se tutto’ora lo pratico e ne sono innamorato il 90% è merito suo. E’ un Maestro veramente forte.
-      Del corso mi piace la forza di gruppo che si sente durante le lezioni, e l’altissima qualità del Maestro che ci trasmette e insegna e infatti, le tecniche sono curate a meraviglia.
-      E in più anche il fatto che viene trattato veramente tutto dalla preparazione atletica (resistenza, forza, coordinamento ecc.) fino alle forme, al combattimento e tutti gli altri aspetti del Taekwondo.
-      E per non dimenticare c’è anche la difesa personale che adoro.
-      Ho notato per esperienza che con il Taekwondo, in questa palestra, non ci si allena solo il fisico ma anche la mente.`,
+    description: `Ho 23 anni, nato in Brasile e adottato a 8. Sono programmatore, diplomato perito informatico nel 2021 come perito informatico. Lo sport è la mia più grande passione: il calcio resta il mio primo amore e lo pratico a livello amatoriale, ma per esigenze personali ho scelto attività al chiuso. Dal 2015, a 14 anni, pratico Taekwondo: iniziato quasi per obbligo, è diventato fondamentale per la mia crescita fisica e mentale. Ciò che mi ha legato è il valore umano della palestra e, in particolare, il Maestro Veronica Placido: ha creato un ambiente familiare, trasmette dedizione, sacrificio e una forza mentale straordinaria, ed è in gran parte merito suo se amo così tanto quest’arte. Le lezioni curano preparazione atletica, forme, combattimento e difesa personale.`,
   },
   {
     id: "6",
@@ -246,7 +230,7 @@ export const historyStudents: HistoryStudent[] = [
       name: "Gabriele",
       surname: "Olla",
       persomalImage: {
-        url: "/historicStudents/gabriele-olla.webp",
+        url: "historicStudents/gabriele-olla.webp",
         altText: "Gabrielle Olla - cintura nera 1° Dan",
       },
     },
@@ -262,7 +246,7 @@ export const historyStudents: HistoryStudent[] = [
       name: "Marco",
       surname: "Bellinzas",
       persomalImage: {
-        url: "/edivan-steri.webp",
+        url: "historicStudents/marco-bellinzas.webp",
         altText: "Marco Bellinzas - cintura rossa superiore 1° Kup",
       },
     },

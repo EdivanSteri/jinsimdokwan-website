@@ -26,7 +26,7 @@ export default React.memo(function PresidentCTA(): JSX.Element {
         className={primaryClass}
         icon={UserPlusIcon}
         aria-label="Scopri la sua storia"
-        href=""
+        href="/president"
       >
         Scopri la sua Storia
       </IconButton>

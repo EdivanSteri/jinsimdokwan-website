@@ -1,5 +1,5 @@
 import React, { useMemo, type JSX } from "react";
-import { formatOpeningHoursDays } from "../../helper/functions";
+import { formatOpeningHoursDays } from "../../../../helpers/functions";
 import { dojoInfoCard } from "./Data/InfoCardsData";
 import type {
   InfoCardItem,

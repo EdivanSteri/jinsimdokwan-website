@@ -3,7 +3,7 @@ import {
   UserGroupIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/outline";
-import GymStat from "../ui/GymStat";
+import GymStat from "../../ui/GymStat";
 
 export default function HeaderGymStats() {
   const stats = [

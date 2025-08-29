@@ -1,4 +1,4 @@
-import GymStat from "../ui/GymStat";
+import GymStat from "../../ui/GymStat";
 import {
   FireIcon,
   TrophyIcon,

@@ -1,6 +1,7 @@
 import React, { useMemo, type JSX } from "react";
-import { formatPriceEUR } from "../../../helper/functions";
+
 import type { CourseView } from "../../CoursesList";
+import { formatPriceEUR } from "../../../../../helpers/functions";
 
 type CourseCardHeaderPriceProps = { course: CourseView };
 

@@ -8,7 +8,7 @@ import CourseCardTimeTable from "./CourseCardTimetables";
 import CourseCardPrimaryTag from "./CourseCardPrimaryTag";
 import { useMemo, type JSX } from "react";
 import React from "react";
-import IconButton from "../../ui/Icons/IconButton";
+import IconButton from "../../../ui/Icons/IconButton";
 
 type CourseCardProps = {
   course: CourseView;

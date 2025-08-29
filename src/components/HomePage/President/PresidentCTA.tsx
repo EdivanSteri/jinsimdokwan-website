@@ -3,7 +3,7 @@ import {
   ChatBubbleBottomCenterTextIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/outline";
-import IconButton from "../ui/Icons/IconButton";
+import IconButton from "../../ui/Icons/IconButton";
 
 export default React.memo(function PresidentCTA(): JSX.Element {
   const baseClass = useMemo(() => "w-full px-4 py-2 text-sm", []);

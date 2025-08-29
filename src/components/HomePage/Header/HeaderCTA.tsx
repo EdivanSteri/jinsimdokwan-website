@@ -1,5 +1,5 @@
 import { EyeIcon, PlayCircleIcon } from "@heroicons/react/16/solid";
-import IconButton from "../ui/Icons/IconButton";
+import IconButton from "../../ui/Icons/IconButton";
 
 export default function HeaderCTA() {
   const baseClass =

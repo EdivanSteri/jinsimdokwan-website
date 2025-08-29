@@ -1,4 +1,4 @@
-import Overlay from "../ui/Images/Overlay";
+import Overlay from "../../ui/Images/Overlay";
 import HeaderCTA from "./HeaderCTA";
 import HeaderDescription from "./HeaderDescription";
 import HeaderGymStats from "./HeaderGymStats";

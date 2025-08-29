@@ -1,4 +1,4 @@
-import type { OpeningHoursDay } from "../ContactAndInfo/Info/Data/InfoCardsTypes";
+import type { OpeningHoursDay } from "../components/HomePage/ContactAndInfo/Info/Data/InfoCardsTypes";
 
 /** formato prezzo in euro (es. 4000 -> "40,00 €") */
 export function formatPriceEUR(priceCents: number): string {

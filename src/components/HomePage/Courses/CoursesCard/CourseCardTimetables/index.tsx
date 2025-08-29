@@ -1,7 +1,8 @@
 import React, { useMemo } from "react";
 import { CalendarIcon } from "@heroicons/react/16/solid";
 import type { CourseTimetable, CourseView } from "../../CoursesList";
-import { formatDaysOfWeek } from "../../../helper/functions";
+import { formatDaysOfWeek } from "../../../../../helpers/functions";
+
 
 type CourseCardTimeTableProps = {
   course: CourseView;

@@ -8,8 +8,8 @@ export default function PresidentCard() {
 
       <div className="w-full h-full relative flex items-end justify-center rounded-2xl overflow-hidden">
         <img
-          className="w-full h-full object-cover object-center "
-          src="/boss.jpg"
+          className="w-full h-full object-cover object-top"
+          src="president/president.jpg"
           alt="president image"
         />
         <div className="w-full absolute bottom-4 px-8 py-2">

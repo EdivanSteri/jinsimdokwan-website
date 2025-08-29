@@ -1,3 +1,9 @@
+import Header from "../../components/PresidentPage/Header";
+
 export default function PresidentPage() {
-  return <div>PresidentPage</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }

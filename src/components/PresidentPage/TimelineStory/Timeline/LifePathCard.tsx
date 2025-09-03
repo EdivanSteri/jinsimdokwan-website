@@ -24,13 +24,13 @@ export default function LifePathCard() {
           Ogni goccia di <span className="text-[#FDE047]">sudore</span>
         </h3>
 
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-2xl leading-relaxed text-white/90">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-lg leading-relaxed text-white/90">
           25 anni di allenamenti quotidiani, rinunce e determinazione. Dietro
           ogni vittoria ci sono migliaia di ore di preparazione silenziosa.
         </p>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-6">
+      <div className="flex flex-col items-stretch justify-center gap-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="flex flex-col items-center justify-center gap-1 border border-white/15 bg-[#B23535] hover:bg-white/5 transition-all duration-300 ease-in-out p-4 rounded-lg">
             <span className="w-8 h-8 bg-[#BC5D5E] rounded-lg flex items-center justify-center">
@@ -64,7 +64,7 @@ export default function LifePathCard() {
           </div>
         </div>
 
-        <figure className="px-4 py-2 w-fit flex flex-col items-center justify-center gap-2 bg-[#A53233] rounded-2xl border border-white/10 text-white text-sm sm:text-base md:text-lg  text-center">
+        <figure className="px-4 py-2 w-full flex flex-col items-center justify-center gap-2 bg-[#A53233] rounded-2xl border border-white/10 text-white text-sm sm:text-base md:text-lg  text-center">
           <blockquote className="text-xl font-bold">
             "Il successo non è mai casuale"
           </blockquote>

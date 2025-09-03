@@ -1,0 +1,81 @@
+.slider {
+    width: 100%;
+    height: calc(var(--height) + 80px);
+    /* Aumentata l'altezza per accommodare lo zoom */
+    overflow: visible;
+    /* Cambiato da hidden a visible */
+    mask-image: linear-gradient(to right,
+            transparent,
+            #000 10% 90%,
+            transparent);
+    position: relative;
+}
+
+.slider .list {
+    display: flex;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+    align-items: center;
+    /* Allinea verticalmente le card */
+}
+
+.slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    top: 0;
+    animation: autoRun 90s linear infinite;
+    transition: all 0.5s ease;
+    animation-delay: calc((90s / var(--quantity)) * (var(--position) - 1) - 90s) !important;
+
+    /* miglioramenti per hover fluido */
+    transition: transform .28s cubic-bezier(.2, .9, .2, 1), filter .28s ease, box-shadow .28s ease;
+    will-change: transform, filter;
+    transform-origin: center center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.slider:hover .item {
+    animation-play-state: paused !important;
+    filter: grayscale(1);
+}
+
+.slider .item:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+    z-index: 50;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    /* Aggiunta ombra per effetto di elevazione */
+}
+
+/* reverse slide side */
+.slider[reverse="true"] .item {
+    animation: reversePlay 60s linear infinite;
+}
+
+@keyframes reversePlay {
+    from {
+        left: calc(var(--width) * -1);
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+/* Aggiunta di un padding al container esterno per prevenire il clipping */
+.slider-container {
+    padding: 40px 0;
+}

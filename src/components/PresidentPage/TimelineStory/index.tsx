@@ -1,0 +1,19 @@
+import React, { type JSX } from "react";
+import Header from "./Header";
+import Timeline from "./Timeline";
+import LifePathCard from "./Timeline/LifePathCard";
+
+export default React.memo(function TimelineStory(): JSX.Element {
+  return (
+    <section
+      id="timeline"
+      tabIndex={-1}
+      aria-label="Timeline del presidente"
+      className="px-4 sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 py-15"
+    >
+      <Header />
+      <Timeline />
+      <LifePathCard />
+    </section>
+  );
+});

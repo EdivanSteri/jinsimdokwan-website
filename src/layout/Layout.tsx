@@ -19,7 +19,7 @@ export default function Layuot() {
           menuMobileIsOpen={menuMobileIsOpen}
           handleOpenMenu={handleOpenMenu}
         />
-        {menuMobileIsOpen && <MobileMenuWrapper />}
+        {menuMobileIsOpen && <MobileMenuWrapper menuMobileIsOpen={menuMobileIsOpen} setMenuMobileIsOpen={setMenuMobileIsOpen}/>}
       </div>
       <Outlet />
       <Footer />

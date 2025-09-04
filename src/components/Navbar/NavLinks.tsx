@@ -13,7 +13,7 @@ const menuItems: MenuItem[] = [
   { label: "Contatti", to: "/#contact-info" },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ setHideMenu }: { setHideMenu?: React.Dispatch<React.SetStateAction<boolean>> }) {
   return (
     <ul
       className="flex flex-col gap-y-4
@@ -22,7 +22,7 @@ export default function NavLinks() {
       aria-label="Voci di navigazione"
     >
       {menuItems.map(({ label, to }) => (
-        <NavItem key={to} label={label} to={to} />
+        <NavItem key={to} label={label} to={to} setHideMenu={setHideMenu}/>
       ))}
     </ul>
   );

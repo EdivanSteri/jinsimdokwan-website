@@ -3,12 +3,18 @@ import { HashLink } from "react-router-hash-link";
 type NavItemProps = {
   label: string;
   to?: string;
+  setHideMenu?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function NavItem({ label, to = "#" }: NavItemProps) {
+export default function NavItem({
+  label,
+  to = "#",
+  setHideMenu,
+}: NavItemProps) {
   return (
     <li role="none">
       <HashLink
+        onClick={() => setHideMenu?.(false)}
         to={to}
         smooth
         role="menuitem"

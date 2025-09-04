@@ -2,14 +2,18 @@ import { PhoneIcon } from "@heroicons/react/16/solid";
 import NavLinks from "./NavLinks";
 import IconButton from "../ui/Icons/IconButton";
 
-export default function MobileMenuWrapper() {
+export default function MobileMenuWrapper({ menuMobileIsOpen, setMenuMobileIsOpen }: {menuMobileIsOpen: boolean, setMenuMobileIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
+  if (!menuMobileIsOpen) return;
+
+
+
   return (
     <nav
-      className="lg:hidden px-4 py-6 w-full space-y-4 bg-black"
+      className="lg:hidden px-4 sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 py-6 w-full space-y-4 bg-black"
       aria-label="Main mobile menu"
     >
       {/* Lista di navigazione */}
-      <NavLinks />
+      <NavLinks setHideMenu={setMenuMobileIsOpen}/>
       {/* CTA */}
       <div>
         <IconButton

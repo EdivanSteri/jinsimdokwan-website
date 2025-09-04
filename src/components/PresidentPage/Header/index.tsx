@@ -1,6 +1,7 @@
 import React, { type JSX } from "react";
 import { MoveDown } from "lucide-react";
 import Overlay from "../../ui/Images/Overlay";
+import { HashLink } from "react-router-hash-link";
 
 export default React.memo(function Header(): JSX.Element {
   return (
@@ -35,15 +36,16 @@ export default React.memo(function Header(): JSX.Element {
           atleti.
         </p>
 
-        <div
-          role="button"
+        <HashLink
+          to="#timeline"
+          smooth
           tabIndex={0}
           aria-label="Scopri la sua storia"
           className="mt-6 text-md font-semibold inline-flex items-center justify-center gap-x-2 p-4 rounded-full bg-[#DC2626] cursor-pointer animate-personalBounce group"
         >
           Scopri la Sua Storia
           <MoveDown className="inline-block w-4 h-4 group-hover:animate-bounce" />
-        </div>
+        </HashLink>
       </div>
     </header>
   );

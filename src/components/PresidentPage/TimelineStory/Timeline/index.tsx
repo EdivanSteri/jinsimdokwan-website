@@ -52,7 +52,7 @@ export default function Timeline(): JSX.Element {
   );
 
   return (
-    <section
+    <div
       aria-labelledby="timeline-title"
       className="text-center"
       role="region"
@@ -82,6 +82,6 @@ export default function Timeline(): JSX.Element {
         />
         {timelineItems}
       </div>
-    </section>
+    </div>
   );
 }

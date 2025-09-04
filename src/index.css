@@ -7,10 +7,8 @@
   --breakpoint-xs: 460px;
 }
 
-/* Imposta un margine di scroll di 65px per compensare l'altezza della navbar fissa,
-   così i link con ancore portano all'inizio visibile della sezione */
-section {
-  /* altezza navbar = 65px */
+/* tutte le section tranne #timeline */
+section:not(#timeline) {
   scroll-margin-top: 65px;
 }
 

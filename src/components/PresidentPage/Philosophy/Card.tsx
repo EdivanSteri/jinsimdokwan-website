@@ -16,7 +16,7 @@ export default React.memo(function Card(): JSX.Element {
       <figure className="w-full h-full relative flex items-end justify-center rounded-2xl overflow-hidden">
         <img
           className="w-full h-full object-cover object-top"
-          src="president/president.jpg"
+          src="filosofia.jpg"
           alt="Ritratto della presidente - Maestro Veronica Placido"
           loading="lazy"
           decoding="async"

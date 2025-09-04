@@ -1,5 +1,6 @@
 import Header from "../../components/PresidentPage/Header";
 import Palmeras from "../../components/PresidentPage/Palmeras";
+import StartJourney from "../../components/PresidentPage/StartJourney";
 import TimelineStory from "../../components/PresidentPage/TimelineStory";
 
 export default function PresidentPage() {
@@ -8,6 +9,7 @@ export default function PresidentPage() {
       <Header />
       <TimelineStory />
       <Palmeras />
+      <StartJourney />
     </div>
   );
 }

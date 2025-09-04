@@ -2,7 +2,7 @@
     width: 100%;
     height: calc(var(--height) + 80px);
     /* Aumentata l'altezza per accommodare lo zoom */
-    overflow: visible;
+    overflow: hidden;
     /* Cambiato da hidden a visible */
     mask-image: linear-gradient(to right,
             transparent,

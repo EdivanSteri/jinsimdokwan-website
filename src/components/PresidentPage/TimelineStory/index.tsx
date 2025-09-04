@@ -1,8 +1,9 @@
+import React, { type JSX } from "react";
 import Header from "./Header";
 import Timeline from "./Timeline";
 import LifePathCard from "./Timeline/LifePathCard";
 
-export default function TimelineStory() {
+export default React.memo(function TimelineStory(): JSX.Element {
   return (
     <div className="px-4 sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 py-15">
       <Header />
@@ -10,4 +11,4 @@ export default function TimelineStory() {
       <LifePathCard />
     </div>
   );
-}
+});

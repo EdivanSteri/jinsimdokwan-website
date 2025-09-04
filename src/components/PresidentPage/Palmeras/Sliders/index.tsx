@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { palmerasData } from "./data/palmerasData";
+import { palmerasData } from "../data/palmerasData";
 import { MapPin, Medal, Trophy } from "lucide-react";
 import "./sliders.css";
 

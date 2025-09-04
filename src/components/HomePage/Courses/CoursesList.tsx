@@ -79,16 +79,23 @@ const COURSES: ReadonlyArray<CourseView> = [
     courseTimetable: [
       {
         days: ["Martedì", "Giovedì"],
-        startTime: "18:30",
-        endTime: "19:45",
+        startTime: "18:00",
+        endTime: "19:00",
         targetAudience: "Bambini",
-        agesRange: { min: 6, max: 13 },
+        agesRange: { min: 5, max: 8 },
+      },
+      {
+        days: ["Martedì", "Giovedì"],
+        startTime: "19:00",
+        endTime: "20:00",
+        targetAudience: "Ragazzi",
+        agesRange: { min: 9, max: 13 },
       },
       {
         days: ["Martedì", "Giovedì"],
         startTime: "20:00",
         endTime: "21:30",
-        targetAudience: "Ragazzi",
+        targetAudience: "Adulti",
         agesRange: { min: 14 }, // 14 e oltre
       },
     ],
@@ -138,9 +145,9 @@ const COURSES: ReadonlyArray<CourseView> = [
     priceCents: 3000,
     courseTimetable: [
       {
-        days: ["Mercoledì"],
-        startTime: "10:00",
-        endTime: "11:30",
+        days: ["Lunedì", "Mercoledì", "Venerdì"],
+        startTime: "09:30",
+        endTime: "10:30",
         targetAudience: "Tutti",
       },
     ],

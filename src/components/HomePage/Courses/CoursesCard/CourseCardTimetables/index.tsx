@@ -3,7 +3,6 @@ import { CalendarIcon } from "@heroicons/react/16/solid";
 import type { CourseTimetable, CourseView } from "../../CoursesList";
 import { formatDaysOfWeek } from "../../../../../helpers/functions";
 
-
 type CourseCardTimeTableProps = {
   course: CourseView;
 };
@@ -76,7 +75,9 @@ export default React.memo(function CourseCardTimeTable({
 
           <div className="flex items-center justify-center gap-x-2 font-bold">
             {/* mantengo join senza separatore come nel tuo originale */}
-            {timetable.days.join("")}
+            {timetable.days.length > 1
+              ? timetable.days.map((d) => formatDaysOfWeek(d)).join("-")
+              : timetable.days.join("-")}
             <span className="text-sm">
               {timetable.startTime}-{timetable.endTime}
             </span>

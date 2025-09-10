@@ -359,7 +359,7 @@ export default React.memo(function ContactForm(): JSX.Element {
             } caret-red-600`}
           />
           <div className="flex justify-end items-center gap-2">
-            <span id={messageCountId} role="status" aria-live="polite" className="text-right text-xs text-white/40">
+            <span id={messageCountId} role="status" aria-live="polite" className="text-right text-xs text-[#a0a5b0]">
               {messageLength}/{MESSAGE_MAX}
             </span>
           </div>

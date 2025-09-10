@@ -11,7 +11,7 @@ export default React.memo(function CourseCardTimeTable({
   course,
 }: CourseCardTimeTableProps) {
   const timetableWrapperClass =
-    "bg-[#FEF2F2] rounded-xl border border-[#E32626]  py-2 flex flex-col items-center justify-center gap-x-2";
+    "bg-[#fff0f0] rounded-xl border border-[#E32626]  py-2 flex flex-col items-center justify-center gap-x-2";
 
   /* helper per creare una key stabile per ogni timetable*/
   const makeKey = (t: CourseTimetable) =>
@@ -51,7 +51,7 @@ export default React.memo(function CourseCardTimeTable({
               {ageRangeText ? ` (${ageRangeText} anni)` : ""}
             </p>
 
-            <p className="text-md font-bold text-red-600">
+            <p className="text-md font-bold text-[#c00000]">
               {timetable.startTime} - {timetable.endTime}
             </p>
 
@@ -68,7 +68,7 @@ export default React.memo(function CourseCardTimeTable({
           role="group"
           aria-label="Orario lezione"
         >
-          <div className="flex items-center justify-center gap-x-2 text-sm  text-[#E23726]">
+          <div className="flex items-center justify-center gap-x-2 text-sm  text-[#c3221f]">
             <CalendarIcon className="w-4 h-4" />
             <span className="font-medium">ORARIO</span>
           </div>

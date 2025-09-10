@@ -137,7 +137,7 @@ export default React.memo(function HistoricStudentCard({
           {storiesNumber === "preview" && (
             <Link
               to="/stories  "
-              className="w-full flex items-center justify-start text-left gap-2 text-red-500 font-semibold text-sm sm:text-base cursor-pointer group/readmore focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              className="w-full flex items-center justify-start text-left gap-2 text-[#d91c25] font-semibold text-sm sm:text-base cursor-pointer group/readmore focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
               aria-label={`Continua a leggere la storia di ${student.personalInfo.name}`}
             >
               <span>Continua a leggere</span>

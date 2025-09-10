@@ -9,7 +9,6 @@ export default function Layuot() {
 
   const handleOpenMenu = (): void => {
     setMenuMobileIsOpen((prev) => !prev);
-    console.log(menuMobileIsOpen);
   };
 
   return (

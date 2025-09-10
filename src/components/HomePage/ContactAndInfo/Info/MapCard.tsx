@@ -6,7 +6,7 @@ import type { MapCard } from "./Data/InfoCardsTypes";
 
 const PLACE_ID_FROM_ENV =
   (import.meta.env as ImportMetaEnv).VITE_JSDK_GOOGLE_MAPS_PLACE_ID ?? "";
-const API_KEY = (import.meta.env as ImportMetaEnv).VITE_GOOGLE_MAPS_API_KEY ?? "";
+const G_MAPS_API_KEY = (import.meta.env as ImportMetaEnv).VITE_GOOGLE_MAPS_API_KEY ?? "";
 
 const LIBRARIES = ["places"] as const;
 
@@ -25,7 +25,7 @@ export default React.memo(function MapCard(): JSX.Element {
   // API loader
   const { isLoaded, loadError } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: API_KEY,
+    googleMapsApiKey: G_MAPS_API_KEY,
     libraries: Array.from(LIBRARIES),
   });
 
@@ -73,7 +73,7 @@ export default React.memo(function MapCard(): JSX.Element {
       </div>
 
       <div className="flex flex-col gap-2" aria-label={title.text}>
-        {!API_KEY ? (
+        {!G_MAPS_API_KEY ? (
           <div className="text-sm text-yellow-300">
             Chiave Google Maps non impostata — aggiungi{" "}
             <code>VITE_GOOGLE_MAPS_API_KEY</code> nel file <code>.env</code>

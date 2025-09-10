@@ -7,6 +7,23 @@
   --breakpoint-xs: 460px;
 }
 
+/* 
+  quando il browser fa l’autofill,
+  lo sfondo rimane #0B0F16 e il testo resta bianco 
+*/
+@layer utilities {
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #0B0F16 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  input:-moz-autofill {
+    box-shadow: 0 0 0px 1000px #0B0F16 inset !important;
+    -moz-text-fill-color: #ffffff !important;
+  }
+}
+
+
 /* tutte le section tranne #timeline */
 section:not(#timeline) {
   scroll-margin-top: 65px;

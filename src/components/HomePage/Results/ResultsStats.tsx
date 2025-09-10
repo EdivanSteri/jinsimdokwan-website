@@ -11,19 +11,19 @@ export default function ResultsStats() {
     {
       id: "anni",
       icon: <UserPlusIcon className="size-6 sm:size-8 text-white" />,
-      value: 15,
+      value: 24,
       text: "Anni di Esperienza",
     },
     {
       id: "studenti",
       icon: <UserGroupIcon className="size-6 sm:size-8 text-white" />,
-      value: 200,
+      value: 30,
       text: "Studenti Attivi",
     },
     {
       id: "cinture",
       icon: <FireIcon className="size-6 sm:size-8 text-white" />,
-      value: 50,
+      value: 15,
       text: "Cinture Nere",
     },
     {

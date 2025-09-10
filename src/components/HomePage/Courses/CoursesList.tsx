@@ -74,7 +74,7 @@ const COURSES: ReadonlyArray<CourseView> = [
     description:
       "L'arte marziale coreana ITF più praticata al mondo, perfetta per bambini e ragazzi. Sviluppa disciplina, rispetto, autostima e forma fisica.",
     imageUrl: "/tkd-img-course-card.avif",
-    tag: "Bambini - Ragazzi",
+    tag: "Bambini - Ragazzi - Adulti",
     priceCents: 4000, // 40,00 €
     courseTimetable: [
       {
@@ -119,7 +119,7 @@ const COURSES: ReadonlyArray<CourseView> = [
     priceCents: 4000,
     courseTimetable: [
       {
-        days: ["Venerdì"],
+        days: ["Lunedì"],
         startTime: "19:00",
         endTime: "20:30",
         targetAudience: "Adulti",

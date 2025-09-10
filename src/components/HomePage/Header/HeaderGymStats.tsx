@@ -10,19 +10,19 @@ export default function HeaderGymStats() {
     {
       id: "anni",
       icon: <UserPlusIcon className="size-6 sm:size-8 text-red-400" />,
-      value: 15,
+      value: 24,
       text: "Anni di Esperienza",
     },
     {
       id: "studenti",
       icon: <UserGroupIcon className="size-6 sm:size-8 text-red-400" />,
-      value: 200,
+      value: 30,
       text: "Studenti Attivi",
     },
     {
       id: "cinture",
       icon: <FireIcon className="size-6 sm:size-8 text-red-400" />,
-      value: 50,
+      value: 10,
       text: "Cinture Nere",
       grid: "col-span-2 xs:col-span-1",
     },

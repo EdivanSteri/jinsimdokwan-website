@@ -28,7 +28,7 @@ export const hilightsItems: ReadonlyArray<InstructorItem> = [
     id: 2,
     icon: FireIcon,
     iconBgColor: "bg-[#EAB308]",
-    title: "Campionessa Regionale",
+    title: "Campionessa Internazionale",
     subTitle: "Multiple volte vincitrice",
     kind: "highlight",
   },

@@ -12,12 +12,12 @@ import { BELT_COLORS } from "../../../../../utils/beltGradeUtils";
 
 // helper palette / funzione di scelta "intelligente" dei colori di UI (non correlati alla cintura)
 const ACCENT_FALLBACKS = [
-  "bg-[#FDE68A]", // soft yellow (childhood)
-  "bg-[#FDBA74]", // warm orange (early teens)
-  "bg-[#60A5FA]", // sky blue (teens)
-  "bg-[#34D399]", // green (young adult)
-  "bg-[#F97316]", // amber (adult)
-  "bg-[#EF4444]", // red (mature / highlight)
+  "bg-[#FF9F1C]", // arancio vibrante, ottimo su bianco e nero
+  "bg-[#E71D36]", // rosso intenso, forte contrasto
+  "bg-[#2EC4B6]", // turchese pieno, luminoso ma visibile
+  "bg-[#118AB2]", // blu profondo, elegante e leggibile
+  "bg-[#073B4C]", // blu notte, contrasto deciso
+  "bg-[#FF9F1C]", // chiusura gradiente armoniosa
 ];
 
 function pickAccentColor(age: number, index: number): string {

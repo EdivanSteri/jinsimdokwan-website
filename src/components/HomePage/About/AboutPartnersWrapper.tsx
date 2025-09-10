@@ -30,9 +30,9 @@ export default function AboutPartnersWrapper() {
       aria-labelledby="partners-heading"
       className="w-full flex flex-col items-start justify-start gap-y-6"
     >
-      <h4 id="partners-heading" className="sr-only">
+      <p id="partners-heading" className="sr-only">
         Partner e Affiliazioni
-      </h4>
+      </p>
 
       <div className="flex flex-col items-start justify-start gap-y-6 w-full">
         {partners.map((partner) => (

@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 type TimelineCardProps = {
   data: {
     icon: React.ElementType;
@@ -8,7 +10,7 @@ type TimelineCardProps = {
   };
 };
 
-export default function Card({ data }: TimelineCardProps) {
+export default function Card({ data }: TimelineCardProps): JSX.Element {
   const Icon = data.icon;
   return (
     <article className="relative lg:max-w-xs">

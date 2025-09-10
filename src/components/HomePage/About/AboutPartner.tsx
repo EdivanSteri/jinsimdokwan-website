@@ -28,7 +28,7 @@ export default function AboutPartner({
         >
           {title}
         </h3>
-        <p className="text-sm text-[#1D87EA]">{description}</p>
+        <p className="text-sm text-[#502C0C]">{description}</p>
         <a
           href={site}
           target="_blank"

@@ -31,7 +31,7 @@ export default function PresidentFeatures({
       : "Specialità dell'istruttrice";
 
   const featuresGrid = (
-    <div
+    <ul
       className={`grid grid-cols-1 ${
         featureType === "highlight" ? "sm:grid-cols-2" : "md:grid-cols-2"
       }  gap-4 items-stretch`}
@@ -39,7 +39,7 @@ export default function PresidentFeatures({
       aria-label={ariaLabelGrid}
     >
       {items}
-    </div>
+    </ul>
   );
 
   if (featureType === "highlight") return featuresGrid;

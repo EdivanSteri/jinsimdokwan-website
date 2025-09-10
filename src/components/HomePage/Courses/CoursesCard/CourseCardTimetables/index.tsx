@@ -51,7 +51,7 @@ export default React.memo(function CourseCardTimeTable({
               {ageRangeText ? ` (${ageRangeText} anni)` : ""}
             </p>
 
-            <p className="text-md font-bold text-[#E32626]">
+            <p className="text-md font-bold text-red-600">
               {timetable.startTime} - {timetable.endTime}
             </p>
 

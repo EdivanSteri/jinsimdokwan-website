@@ -18,3 +18,5 @@ export const selectFormData: ContactFormSelect[] = [
     value: "Tutti i corsi",
   },
 ];
+
+export const MESSAGE_MAX = 500;

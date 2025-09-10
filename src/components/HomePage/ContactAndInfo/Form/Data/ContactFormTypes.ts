@@ -8,6 +8,7 @@ export type ContactForm = {
   cognome: string;
   email: string;
   telefono: string;
+  telefonoChiamata: boolean;
   corso: string;
   messaggio: string;
 };

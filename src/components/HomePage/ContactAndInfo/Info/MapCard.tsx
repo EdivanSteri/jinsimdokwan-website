@@ -119,7 +119,7 @@ export default React.memo(function MapCard(): JSX.Element {
                 Visualizza mappa più grande
               </a>
 
-              <div className="text-xs text-gray-500 mt-1">
+              <div className="text-xs text-[#a0a5b0] mt-1">
                 Luogo verificato: {address.placeName ?? title.text}
               </div>
             </figcaption>

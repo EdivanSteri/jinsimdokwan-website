@@ -187,7 +187,7 @@ export default React.memo(function CoursesList(): JSX.Element {
 
         <ul role="list" className="flex flex-col items-center justify-center md:flex-row md:gap-6 md:items-start w-full">
           {otherCourses.map((course) => (
-            <CourseCard course={course} />
+            <CourseCard key={course.id} course={course} />
           ))}
         </ul>
       </ul>

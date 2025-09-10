@@ -27,7 +27,7 @@ export default function ResultsStats() {
       text: "Cinture Nere",
     },
     {
-      id: "cinture",
+      id: "discipline",
       icon: <TrophyIcon className="size-6 sm:size-8 text-white" />,
       value: 3,
       text: "Discipline offerte",

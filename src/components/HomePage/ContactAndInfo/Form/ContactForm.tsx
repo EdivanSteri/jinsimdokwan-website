@@ -194,7 +194,7 @@ export default React.memo(function ContactForm(): JSX.Element {
             aria-describedby={errors.nome ? "nome-error" : undefined}
             className={`w-full p-2 bg-[#0B0F16] border rounded-lg focus:outline-none ${
               errors.nome ? "border-red-500" : "border-white/30 focus:border-red-600"
-            }`}
+            } caret-red-600`}
           />
           {errors.nome && (
             <small id="nome-error" role="alert" className="text-xs text-red-400">
@@ -216,7 +216,7 @@ export default React.memo(function ContactForm(): JSX.Element {
             value={formState.cognome}
             onChange={handleChange}
             ref={cognomeRef}
-            className="w-full p-2 bg-[#0B0F16] border border-white/30 rounded-lg focus:outline-none focus:border-red-600"
+            className="w-full p-2 bg-[#0B0F16] border border-white/30 rounded-lg focus:outline-none focus:border-red-600 caret-red-600"
           />
         </div>
 
@@ -238,7 +238,7 @@ export default React.memo(function ContactForm(): JSX.Element {
             aria-describedby={errors.email ? "email-error" : undefined}
             className={`w-full p-2 bg-[#0B0F16] border rounded-lg focus:outline-none ${
               errors.email ? "border-red-500" : "border-white/30 focus:border-red-600"
-            }`}
+            } caret-red-600`}
           />
           {errors.email && (
             <small id="email-error" role="alert" className="text-xs text-red-400">
@@ -267,7 +267,7 @@ export default React.memo(function ContactForm(): JSX.Element {
             aria-describedby={errors.telefono ? "telefono-error" : undefined}
             className={`w-full p-2 bg-[#0B0F16] border rounded-lg focus:outline-none ${
               errors.telefono ? "border-red-500" : "border-white/30 focus:border-red-600"
-            }`}
+            } caret-red-600`}
           />
           {errors.telefono && (
             <small id="telefono-error" role="alert" className="text-xs text-red-400">
@@ -356,7 +356,7 @@ export default React.memo(function ContactForm(): JSX.Element {
             ref={messaggioRef}
             className={`w-full p-2 border bg-[#0B0F16] rounded-lg focus:outline-none ${
               errors.messaggio ? "border-red-500" : "border-white/30 focus:border-red-600"
-            }`}
+            } caret-red-600`}
           />
           <div className="flex justify-end items-center gap-2">
             <span id={messageCountId} role="status" aria-live="polite" className="text-right text-xs text-white/40">

@@ -6,7 +6,8 @@ import SinceritySchool from "./SinceritySchool";
 
 export default function Philosophy() {
   return (
-    <div
+    <section
+      role="region"
       className="px-4 sm:px-15 md:px-30 lg:px-4 xl:px-16 2xl:px-30 py-15
                 bg-[#2A3341]"
     >
@@ -17,6 +18,6 @@ export default function Philosophy() {
       </div>
       <HousePillars />
       <Quote />
-    </div>
+    </section>
   );
 }

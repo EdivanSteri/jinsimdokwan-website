@@ -5,5 +5,6 @@ export type LegendaryNumber = {
   icon: ElementType;
   iconBgColor: string;
   counter: number;
+  counterColor: string;
   title: string;
 };

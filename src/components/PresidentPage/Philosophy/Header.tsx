@@ -4,7 +4,6 @@ import { Lightbulb } from "lucide-react";
 export default React.memo(function Header(): JSX.Element {
   return (
     <header
-      role="region"
       aria-labelledby="philosophy-heading"
       className="flex flex-col items-center justify-center gap-6 text-white text-center"
     >
@@ -16,10 +15,7 @@ export default React.memo(function Header(): JSX.Element {
         FILOSOFIA
       </span>
 
-      <h2
-        id="philosophy-heading"
-        className="text-4xl  md:text-5xl font-bold"
-      >
+      <h2 id="philosophy-heading" className="text-4xl  md:text-5xl font-bold">
         Il Cuore della JinSimDoKwan
       </h2>
 

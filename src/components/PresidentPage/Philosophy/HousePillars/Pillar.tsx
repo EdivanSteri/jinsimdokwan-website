@@ -13,7 +13,7 @@ export default React.memo(function Pillar({
   return (
     <li
       tabIndex={0}
-      role="article"
+      role="listitem"
       aria-labelledby="pillar-jin-title"
       className="flex flex-col items-center justify-center gap-4 bg-[#52404B] border border-white/15 hover:border-red-600/30 transition duration-300 ease-in group/pilastri rounded-2xl p-8 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-600/30"
     >
@@ -31,7 +31,7 @@ export default React.memo(function Pillar({
         >
           {pillar.corean}
         </h4>
-        <span className="text-lg sm:text-xl text-[#F36F70] font-semibold">
+        <span className="text-lg sm:text-xl text-[#FFBCBF] font-semibold">
           {pillar.italian}
         </span>
       </div>

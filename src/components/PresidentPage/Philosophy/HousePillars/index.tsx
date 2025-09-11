@@ -4,7 +4,6 @@ import Pillars from "./Pillars";
 export default React.memo(function HousePillars(): JSX.Element {
   return (
     <div
-      role="region"
       aria-labelledby="house-pillars-heading"
       className="flex flex-col items-center justify-center text-center gap-10 mt-16"
     >

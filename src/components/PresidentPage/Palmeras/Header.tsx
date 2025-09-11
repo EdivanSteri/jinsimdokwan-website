@@ -4,7 +4,6 @@ import { Trophy } from "lucide-react";
 export default React.memo(function Header(): JSX.Element {
   return (
     <header
-      role="region"
       aria-labelledby="results-heading"
       className="flex flex-col items-center justify-center gap-8 lg:gap-12 text-center"
     >

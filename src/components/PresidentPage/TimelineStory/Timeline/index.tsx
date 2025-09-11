@@ -14,7 +14,7 @@ export default function Timeline(): JSX.Element {
   );
 
   return (
-    <div aria-labelledby="timeline-title" className="text-center" role="region">
+    <main role="main" aria-labelledby="timeline-title" className="text-center">
       <p id="timeline-title" className="sr-only">
         Cronologia: dalla nascita dell'associazione ai giorni nostri
       </p>
@@ -32,6 +32,6 @@ export default function Timeline(): JSX.Element {
         />
         {timelineItems}
       </ul>
-    </div>
+    </main>
   );
 }

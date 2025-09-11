@@ -15,10 +15,7 @@ export default React.memo(function Header(): JSX.Element {
         FILOSOFIA
       </span>
 
-      <h2
-        id="philosophy-heading"
-        className="text-4xl  md:text-5xl font-bold"
-      >
+      <h2 id="philosophy-heading" className="text-4xl  md:text-5xl font-bold">
         Il Cuore della JinSimDoKwan
       </h2>
 

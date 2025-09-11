@@ -31,7 +31,7 @@ export default React.memo(function Pillar({
         >
           {pillar.corean}
         </h4>
-        <span className="text-lg sm:text-xl text-[#e53940] font-semibold">
+        <span className="text-lg sm:text-xl text-[#FFBCBF] font-semibold">
           {pillar.italian}
         </span>
       </div>

@@ -17,7 +17,7 @@ export const legendaryNumbersData: LegendaryNumber[] = [
     icon: Flag,
     iconBgColor: "from-[#60A5FA] to-[#2563EB]",
     counter: competitionsCount,
-    counterColor: "text-[#1e78f0]",
+    counterColor: "text-[#8FFFF0]",
     title: "Competizioni",
   },
   {
@@ -41,7 +41,7 @@ export const legendaryNumbersData: LegendaryNumber[] = [
     icon: Flag,
     iconBgColor: "from-[#F87172] to-[#EC4898]",
     counter: 24,
-    counterColor: "text-[#F87072]",
+    counterColor: "text-[#FFFFFF]",
     title: "Anni di Carriera",
   },
 ];

@@ -23,7 +23,9 @@ export default React.memo(function Item({
         >
           <ICON size={20} />
         </span>
-        <span className="font-bold text-[#5EA3FA] text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <span
+          className={`font-bold ${legendaryNumber.counterColor} text-2xl sm:text-3xl md:text-4xl lg:text-5xl`}
+        >
           {legendaryNumber.counter}
         </span>
         <span className="text-left text-sm sm:text-base">

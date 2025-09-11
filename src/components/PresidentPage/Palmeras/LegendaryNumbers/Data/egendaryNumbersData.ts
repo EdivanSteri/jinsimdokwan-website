@@ -17,6 +17,7 @@ export const legendaryNumbersData: LegendaryNumber[] = [
     icon: Flag,
     iconBgColor: "from-[#60A5FA] to-[#2563EB]",
     counter: competitionsCount,
+    counterColor: "text-[#1e78f0]",
     title: "Competizioni",
   },
   {
@@ -24,6 +25,7 @@ export const legendaryNumbersData: LegendaryNumber[] = [
     icon: Flag,
     iconBgColor: "from-[#FACB15] to-[#F97416]",
     counter: europeanTitles,
+    counterColor: "text-[#F9C815]",
     title: "Titoli Europei",
   },
   {
@@ -31,6 +33,7 @@ export const legendaryNumbersData: LegendaryNumber[] = [
     icon: Flag,
     iconBgColor: "from-[#EBB409] to-[#FDE046]",
     counter: worldTitles,
+    counterColor: "text-[#EBB50B]",
     title: "Titoli Mondiali",
   },
   {
@@ -38,6 +41,7 @@ export const legendaryNumbersData: LegendaryNumber[] = [
     icon: Flag,
     iconBgColor: "from-[#F87172] to-[#EC4898]",
     counter: 24,
+    counterColor: "text-[#F87072]",
     title: "Anni di Carriera",
   },
 ];

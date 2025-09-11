@@ -18,7 +18,7 @@ export default React.memo(function Quote(): JSX.Element {
         ambiente di rispetto e autenticità.
       </blockquote>
 
-      <footer className="text-[#C55E62] text-lg sm:text-xl font-bold italic" aria-label="Autore citazione">
+      <footer className="text-[#b84e52] text-lg sm:text-xl font-bold italic" aria-label="Autore citazione">
         - Maestro Veronica Placido
       </footer>
     </aside>

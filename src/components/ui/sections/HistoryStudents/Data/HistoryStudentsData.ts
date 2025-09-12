@@ -1,4 +1,7 @@
-import { beltGrades, type BeltGrade } from "../../../utils/beltGradeUtils";
+import {
+  beltGrades,
+  type BeltGrade,
+} from "../../../../../utils/beltGradeUtils";
 import type { HistoryStudent } from "./HistoryStudentsTypes";
 
 /**

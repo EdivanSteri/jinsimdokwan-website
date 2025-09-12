@@ -2,7 +2,7 @@ import About from "../../components/HomePage/About";
 import ContactAndInfo from "../../components/HomePage/ContactAndInfo";
 import Courses from "../../components/HomePage/Courses";
 import Header from "../../components/HomePage/Header";
-import HistoryStudents from "../../components/HistoryStudents";
+import HistoryStudents from "../../components/ui/sections/HistoryStudents";
 import Partners from "../../components/HomePage/Partners";
 import President from "../../components/HomePage/President";
 import Results from "../../components/HomePage/Results";

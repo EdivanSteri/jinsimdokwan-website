@@ -1,4 +1,4 @@
-import type { BeltGrade } from "../../../utils/beltGradeUtils";
+import type { BeltGrade } from "../../../../../utils/beltGradeUtils";
 
 export type PersonalImage = {
   url: string;

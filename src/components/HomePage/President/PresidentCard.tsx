@@ -1,10 +1,16 @@
 import { StarIcon } from "@heroicons/react/16/solid";
+import Halo from "../../ui/Decoratives/Halo";
 
 export default function PresidentCard() {
   return (
     <article className="lg:w-1/2 relative h-60 w-60 md:w-full md:h-130 mx-auto">
-      {/* HALO: elemento separato posizionato dietro */}
-      <div className="absolute -inset-5 bg-gradient-to-r from-red-500 via-red-600 to-red-700 rounded-3xl blur-xl opacity-30 pointer-events-none z-0" />
+      {/* HALO: elemento decorativo posizionato dietro l'immagine*/}
+      <Halo
+        bgColor="bg-gradient-to-r from-red-500 via-red-600 to-red-700"
+        rounded="rounded-3xl"
+        blur="blur-xl"
+        opacity="opacity-30"
+      />
 
       <div className="w-full h-full relative flex items-end justify-center rounded-2xl overflow-hidden">
         <img

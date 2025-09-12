@@ -1,5 +1,5 @@
 import React, { type JSX } from "react";
-import Overlay from "../../ui/Images/Overlay";
+import Overlay from "../../ui/Decoratives/Overlay";
 import HeaderContent from "./HeaderContent";
 
 export default React.memo(function Header(): JSX.Element {
